@@ -20,7 +20,6 @@ To change the face of healthcare in India, one consumer at a time.
 ### Executing program
 
 * `npm start`
-``
 ```
 
 ## Authors
@@ -41,3 +40,4 @@ This project is licensed under the [gpl-3.0] License - see the LICENSE.md file f
 
 Inspiration, code snippets, etc.
 * [PharmEasy](pharmeasy.in)
+```

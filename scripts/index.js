@@ -22,12 +22,13 @@ owl.owlCarousel({
 
 var owl = $('.owl-two');
 owl.owlCarousel({
-    items:8,
+    items:2,
     loop:true,
-    margin:10,
+    margin:220,
     autoplay:true,
     autoplayTimeout:4000,
     autoplayHoverPause:true,
+    dots: false,
     nav: true,
   navText: ["<img src='https://assets.pharmeasy.in/web-assets/dist/a9a45455.svg'>","<img src='https://assets.pharmeasy.in/web-assets/dist/a9a45455.svg'>"]
 });

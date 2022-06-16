@@ -1,5 +1,12 @@
+
 #navbar{
     background-color: teal;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    top: 0;
+    padding: 0 10px;
+    padding-top: 20px;
 }
 #navtop{
     display:flex;

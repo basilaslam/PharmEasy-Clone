@@ -4,8 +4,13 @@ body{
     margin: 0;
 }
 
+.lab_test{
+    margin-left: 25%;
+    margin-top: 200px;
+}
 .carousel,.owl-dots{
     margin-left: 150px;
+  
 }
 .owl-stage-outer{
     margin-top: 30px;
@@ -32,9 +37,7 @@ font-size: 40px;
     top: 40%;
 
 }
-.lab_test{
-    margin-left: 25%;
-}
+
 .offerFilters{
     display: flex;
     width: 1024px;
@@ -251,4 +254,27 @@ padding: 10px;
 
 .speciality > div > div.owl-nav > button.owl-next > img{
     margin-right: 150px;
+}
+
+.benefits_cards{
+    margin-top: 30px;
+    margin-left: 25%;
+    display: flex;
+    gap: 30px;
+    color: #727577;
+}
+.benefits_cards .card{
+    width: 240px;
+    line-height: 1.5;
+}
+.benefits_cards .card .top h3{
+    font-weight: 100;
+}
+.benefits_cards .card .bottom p{
+    font-size: 16px;
+}
+
+
+.blankSpace{
+    height: 500px;
 }

@@ -1,0 +1,199 @@
+body{
+    margin-left: 200PX;
+}
+
+#homesec{
+   display: flex;
+   text-align: center;
+   padding: 1px;
+}
+#homesec>p{
+   font-family: 'Joan', serif;
+}
+#couponword{
+   width: 80%;
+}
+#couponword>p{
+   font-size: 20px;
+}
+#couponword>p>span{
+   color: #10847E;
+   font-size: 20px;
+}
+h3{
+   font-family: 'Nunito', sans-serif;
+   color: #4b4b4b;
+}
+#buttons{
+   width: 30%;
+   display: flex;
+   justify-content: space-between;
+}
+#buttons>button{
+   background-color: white;
+   border-radius: 10px;
+   gap: 20px;
+   border: 1px solid grey;
+   padding: 5px;
+   font-size: 15px;
+   font-family: 'Nunito', sans-serif;
+   cursor: pointer;
+}
+#buttons>button:hover{
+   background-color: rgb(102, 102, 231);
+}
+#offersec{
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   width: 90%;
+}
+.sec1{
+   display: flex;
+   width: 70%;
+   gap: 30px;
+}
+.sec2{
+   display: flex;
+   justify-content: space-between;
+}
+.sec2>h2{
+   color: green;
+   cursor: pointer;
+}
+.imgsec{
+   width: 40%;
+   height: 20%;
+   margin-top: 30px;
+}
+.imgsec>img{
+   width: 100%;
+   height: 100%;
+}
+.headsec{
+   height: 100%;
+}
+.homediv{
+   border: 1px solid grey;
+   width: 80%;
+   margin-top: 10px;
+   padding: 10px;
+   border-radius: 20px;
+}
+#offinfo{
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   width: 90%;
+   height: 100px;
+   margin-top: 20px;
+}
+#offinfo>div{
+   width: 90%;
+   height: 100%;
+}#offinfo>div>p{
+   font-size: 20px;
+   font-family: 'Nunito', sans-serif;
+   color: #4b4b4b;
+
+
+}
+#mybtn{
+   background-color: white;
+   border: 0px;
+   color: green;
+   cursor: pointer;
+}
+#more {display: none;}
+
+// navbar css file;
+#navbar{
+background-color: teal;
+}
+#navtop{
+display:flex;
+}
+.mainlogo{
+width:200px;
+height:50px;
+margin-top: 10px;
+}
+#bar{
+display:flex;
+background-color: white;
+width:800px;
+height:50px;
+margin-top: 10px;
+margin-left: 50px;
+border-radius: 10px;
+}
+#searchicon{
+width:30px;
+height:25px;
+background-color: rgb(222, 231, 231);
+margin-top: 10px;
+}
+#select{
+width:170px;
+font-size: larger;
+border:1px solid white;
+border-radius: 10px;
+color: teal;
+}
+#searchbar{
+border:1px solid white;
+width:600px;
+font-size: larger;
+}
+.searchicon{
+background-color: rgb(241, 241, 241);
+width:50px;
+text-align: center;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;
+}
+#navbottom{
+display:flex;
+margin-top: 15px;
+
+width:1090px;
+height:40px;
+margin-left: 250px;
+justify-content: space-between;
+padding-top: 5px;
+}
+#left{
+display:flex;
+color:white;
+font-size: larger;
+font-family:'Times New Roman', Times, serif;
+
+width:520px;
+justify-content: space-between;
+}
+#right{
+display:flex;
+color:white;
+font-size: larger;
+
+width:380px;
+justify-content: space-between;
+
+
+}
+.center{
+
+margin-top: -22px;
+margin-left: 30px;
+
+
+}
+/* navbar ended */
+#demo{
+width: 90%;
+height: 400px;
+border:1px solid #4b4b4b;
+
+}
+#demo>ul>li{
+font-family: 'Joan', serif;
+
+}

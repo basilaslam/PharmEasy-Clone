@@ -200,3 +200,28 @@ font-family: 'Joan', serif;
 #demo>h3{
     padding-left: 10px;
 }
+#appstore{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+#appstore>div{
+    width: 45%;
+    height: 700PX;
+    box-sizing: border-box;
+}
+#appstore>div>img{
+    width: 100%;
+    height: 100%;
+}
+#appdiv{
+  display: flex;
+}
+#appdiv>div{
+    width: 250px;
+    height: 100px;
+}
+#appdiv>div>img{
+    width: 100%;
+    height: 100%;
+}

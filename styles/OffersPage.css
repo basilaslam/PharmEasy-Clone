@@ -40,7 +40,7 @@ h3{
    cursor: pointer;
 }
 #buttons>button:hover{
-   background-color: rgb(102, 102, 231);
+   background-color: #33b133;
 }
 #offersec{
    display: grid;
@@ -196,4 +196,7 @@ border:1px solid #4b4b4b;
 #demo>ul>li{
 font-family: 'Joan', serif;
 
+}
+#demo>h3{
+    padding-left: 10px;
 }

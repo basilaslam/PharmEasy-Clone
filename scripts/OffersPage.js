@@ -382,6 +382,14 @@ let diagnostic=[
         copycode: "Copy Code",
 
     },
+    {
+        image: "https://cms-contents.pharmeasy.in/offer/79c9e323814-AMAZON.jpg",
+        heading: "Get flat 25% off on first medicine order + Easy my trip discount upto Rs.1000",
+        des:"Get flat 25% discount to new users(Minimum Order Value-899) + Easy my trip discount upto Rs.1000" ,
+        code:"Code: EASE25" ,
+        copycode: "Copy Code",
+
+    },
 ]
 
 
@@ -445,7 +453,7 @@ let healthcare=[
 
   document.getElementById("all").addEventListener("click",allfun);
     function allfun(){
-        document.getElementById("offersec").innerHTML=null;
+       document.getElementById("offersec").innerHTML=null;
 
     event.preventDefault();
       all.map(function(el){

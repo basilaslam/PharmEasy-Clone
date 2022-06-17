@@ -553,11 +553,6 @@ document.getElementById("payment").addEventListener("click",paymentfun);
          h3.innerText=el.code;
          var h2=document.createElement("h2");
          h2.innerText=el.copycode;
-         h2.onclick(function(el){
-             objcode={
-                 
-             }
-         })
          div2.append(h3,h2);
 
 

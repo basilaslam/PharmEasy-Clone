@@ -111,9 +111,10 @@ async function main()
     appendMedicine(datas);
 }
 
-document.querySelector("#searchbar").addEventListener("input",function(){
-    debounceFunction(main,10);
-});
+    document.querySelector("#searchbar").addEventListener("input",function(){
+        debounceFunction(main,10);
+    });
+
 
 function debounceFunction(func,delay)
 {

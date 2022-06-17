@@ -109,6 +109,7 @@
    //
    console.log("qw=",query);
      let count=1;
+     var productArr=[];
      data.forEach(function(el){
          if(el.name.toUpperCase().includes(query.toUpperCase()))
          {
@@ -161,6 +162,10 @@
             cartbutton.style.borderRadius="5px";
             cartbutton.style.marginTop="50%";
             cartbutton.style.border="none";
+            cartbutton.addEventListener("click",function(){
+                productArr.push(el);
+                localStorage.setItem("cartProduct",JSON.stringify(productArr));
+            });
 
 
             cart.append(cartbutton);

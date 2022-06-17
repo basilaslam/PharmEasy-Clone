@@ -329,3 +329,147 @@ padding: 10px;
 }
 
 
+
+        /* -----------------------------APP BENEFITS SECTION ------------------------------ */
+        #appBenefits {
+            display: flex;
+            width: 70%;
+            margin: auto;
+            margin-top: 30px;
+        }
+
+        .appBenefitsCard  {
+            /* width: 150px; */
+            padding-left: 30px;
+            margin-left: 40px;
+            text-align: left;
+            font-weight: 100;
+            color: #5f676d;
+            font-family: sans-serif;
+            margin-bottom: 20px;
+            
+            /* border: 1px solid red; */
+
+        }
+
+        .appBenefitsCard > h4 {
+            font-family: sans-serif;
+            font-weight: 530;
+        }
+
+        #downloadAppSection {
+            display: flex;
+            margin-left: 300px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        
+        #appLinks {
+            margin-left: 100px;
+            width: 600px;
+            margin-top: 30px;
+            /* border: 1px solid red; */
+        }
+
+        #appLinks > h2 {
+            margin-left: 18px;
+            font-family: sans-serif;
+            font-weight: 300;
+            color: #4f585e;
+        }
+
+        #app-store-container {
+            display: flex;
+            margin-top: 40px;
+        }
+
+        .AppStoreDiv {
+            display: flex;
+            width: 180px;
+            align-items: center;
+            height: 56px;
+            border-radius: 10px;
+            /* margin-left: 30px; */
+            margin-left: 15px;
+            background-color: #4a4a4a;
+            /* border: 1px solid green; */
+            padding-left: 20px;
+        }
+
+        .AppStoreDiv > p {
+            margin-left: 15px;
+            font-family: sans-serif;
+            color: white;
+        }
+
+
+        /*-----------------------------------  FOOTER SECTION STARTS------------------------------------------------*/
+          #healthcare-footer {
+            background-color: rgb(243, 255, 255);
+            font-family: sans-serif;
+            font-size: 16px;
+            font-weight: 250;
+            height: 600px;
+            display: flex;
+            /* width: 80%; */
+            margin: auto;
+        }
+
+        .footerColumns {
+            margin-left: 120px;
+        }
+
+        #socialIconsContainer {
+            display: flex;
+        }
+        .socialIcons {
+            width: 30px;
+            height: 30px;
+            margin-left: 20px;
+        }
+
+       /*----------------------------------------------------  FOOTER SECTION ENDS----------------------------------------------------*/
+
+         /*------------------------ Footer: Payment Partners Section --------------------*/
+
+         #paymentPartnerSection {
+            background-color: rgb(243, 255, 255);
+            height: 150px;
+        }
+
+        #paymentPartners {
+            display: flex;
+            margin-left: 80px;
+        }
+
+        #paymentPartnersHeader {
+            margin-left: 100px;
+            font-family: sans-serif;
+            font-weight: 400;
+            margin-top: 0;
+            color: #4a4a4a;
+            font-weight: 600;
+        }
+
+        .paymentPartnerLogo {
+            height: 48px;
+            width: 48px;
+            padding-left: 20px;
+            margin-top: 15px;
+        }
+
+        #paymentPartners h3 {
+            margin-left: 50px;
+            font-family: sans-serif;
+            font-weight: 400;
+            color: #4a4a4a;
+
+        }
+        #paymentPartners > img{
+            object-fit: contain;
+        }
+        hr{
+            margin: 0;
+        }
+
+

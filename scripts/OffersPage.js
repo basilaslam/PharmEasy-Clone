@@ -511,6 +511,7 @@ let healthcare=[
 
 
 document.getElementById("payment").addEventListener("click",paymentfun);
+var arr=[];
     function paymentfun(){
         document.getElementById("offersec").innerHTML=null;
 
@@ -551,12 +552,10 @@ document.getElementById("payment").addEventListener("click",paymentfun);
 
          var h3=document.createElement("h3");
          h3.innerText=el.code;
-         var h2=document.createElement("h2");
+         var h2=document.createElement("button");
          h2.innerText=el.copycode;
-         h2.onclick(function(el){
-             objcode={
-                 
-             }
+         h2.addEventListener("click",function(){
+             console.log("hjsbcnhn");
          })
          div2.append(h3,h2);
 
@@ -568,6 +567,9 @@ document.getElementById("payment").addEventListener("click",paymentfun);
 
       })        
 16    }
+  function myfun(el){
+      alert("jnvldndlnbn")
+  }
 
 
 

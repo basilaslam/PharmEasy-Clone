@@ -494,6 +494,16 @@ let healthcare=[
          h3.innerText=el.code;
          var h2=document.createElement("h2");
          h2.innerText=el.copycode;
+         h2.addEventListener("click",function(){
+            var objcode={
+                offerscode:el.code,
+            }
+            arr.push(objcode)
+            alert("Code Copied Successfully !")
+            console.log(arr)
+            localStorage.setItem("offerscode",JSON.stringify(arr));
+
+        })
          div2.append(h3,h2);
 
 
@@ -511,7 +521,7 @@ let healthcare=[
 
 
 document.getElementById("payment").addEventListener("click",paymentfun);
-var arr=[];
+var arr=JSON.parse(localStorage.getItem("offerscode"))||[];
     function paymentfun(){
         document.getElementById("offersec").innerHTML=null;
 
@@ -552,10 +562,17 @@ var arr=[];
 
          var h3=document.createElement("h3");
          h3.innerText=el.code;
-         var h2=document.createElement("button");
+         var h2=document.createElement("h2");
          h2.innerText=el.copycode;
          h2.addEventListener("click",function(){
-             console.log("hjsbcnhn");
+             var objcode={
+                 offerscode:el.code,
+             }
+             arr.push(objcode)
+             alert("Code Copied Successfully !")
+             console.log(arr)
+             localStorage.setItem("offerscode",JSON.stringify(arr));
+
          })
          div2.append(h3,h2);
 
@@ -616,6 +633,16 @@ document.getElementById("medicine").addEventListener("click",medfun);
          h3.innerText=el.code;
          var h2=document.createElement("h2");
          h2.innerText=el.copycode;
+         h2.addEventListener("click",function(){
+            var objcode={
+                offerscode:el.code,
+            }
+            arr.push(objcode)
+            alert("Code Copied Successfully !")
+            console.log(arr)
+            localStorage.setItem("offerscode",JSON.stringify(arr));
+
+        })
          div2.append(h3,h2);
 
 
@@ -671,6 +698,16 @@ document.getElementById("diagnostic").addEventListener("click",diafun);
          h3.innerText=el.code;
          var h2=document.createElement("h2");
          h2.innerText=el.copycode;
+         h2.addEventListener("click",function(){
+            var objcode={
+                offerscode:el.code,
+            }
+            arr.push(objcode)
+            alert("Code Copied Successfully !")
+            console.log(arr)
+            localStorage.setItem("offerscode",JSON.stringify(arr));
+
+        })
          div2.append(h3,h2);
 
 
@@ -728,6 +765,16 @@ document.getElementById("healthcare").addEventListener("click",healthfun);
          h3.innerText=el.code;
          var h2=document.createElement("h2");
          h2.innerText=el.copycode;
+         h2.addEventListener("click",function(){
+            var objcode={
+                offerscode:el.code,
+            }
+            arr.push(objcode)
+            alert("Code Copied Successfully !")
+            console.log(arr)
+            localStorage.setItem("offerscode",JSON.stringify(arr));
+
+        })
          div2.append(h3,h2);
 
 

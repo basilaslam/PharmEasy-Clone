@@ -6,6 +6,10 @@ overflow: scroll;
  padding-left: 10px;
  position: relative;
 }
+a{
+  text-decoration: none;
+  color: white;
+}
 /*  ////////////////////////////          Navbar CSS    ////////////////////////////////////         */
 #navbar{
 background-color: teal;

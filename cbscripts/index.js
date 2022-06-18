@@ -33,15 +33,15 @@ function cbnavbar()
 </div>
 <div id="navbottom">
     <div id="left">
-        <div>Order Medicines</div>
-        <div>Healthcare Products</div>
-        <div>Lab Tests</div>
-        <div>RTPCR</div>
+       <a href="./orderPage.html"> <div>Order Medicines</div></a>
+       <a href="./healthProducts.html"> <div>Healthcare Products</div></a>
+      <a href="./labTest.html">  <div>Lab Tests</div></a>
+       <a href="rtcpr.html"> <div>RTPCR</div></a>
     </div>
     <div id="right">
-        <div><img src="https://assets.pharmeasy.in/web-assets/dist/275c07e1.svg" alt=""><div class="center">Offers</></div></div>
-        <div><img src="https://assets.pharmeasy.in/web-assets/dist/5eb42971.svg" alt=""><div class="center">Login/Signup</div></div>
-        <div><img src="https://assets.pharmeasy.in/web-assets/dist/21b0b5ba.svg" alt=""><div class="center">Cart</div></div>
+    <div><img src="https://assets.pharmeasy.in/web-assets/dist/275c07e1.svg" alt=""><a href="./offers.html"> <div class="center">Offers</></div></a></div>
+       <div><img src="https://assets.pharmeasy.in/web-assets/dist/5eb42971.svg" alt=""> <a href="#"><div id="login" class="center">Login/Signup</div></div></a>
+        <div><img src="https://assets.pharmeasy.in/web-assets/dist/21b0b5ba.svg" alt=""><a a href="./add to cart/addToCart.html"><div class="center">Cart</div></a></div>
     </div>
 </div>`;
 }

@@ -805,6 +805,9 @@ moreText.style.display = "inline";
 }
 }
 
+// var home=document.getElementById("home");
+// home.innerHTML= window.location.href="https://pharmeasy.in"
+
 
 // import navbar from '../components/navbar.js'
 

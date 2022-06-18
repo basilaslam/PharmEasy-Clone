@@ -1,3 +1,8 @@
+import navbar from '../component/navbar.js'
+
+
+// Appending Navbar
+document.getElementById('navbar').innerHTML = navbar()
 let all=[
     {
         image:"https://cms-contents.pharmeasy.in/offer/bb20b7c6548-2.jpg?dim=60x0&dpr=1.25&q=100" ,

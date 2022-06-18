@@ -121,6 +121,14 @@ p {
     border: none;
     font-size: 15px;
 }
+ div.cart_box3 > div:nth-child(5){
+    width: 60px;
+    background-color: #dee7e7;
+ }
+ div.cart_box3 > div:nth-child(5) > img{
+    background-color: #dee7e7;
+    margin-left: 10px;
+ }
 input[type="text" i] {
     padding: 1px 2px;
 }

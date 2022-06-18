@@ -32,7 +32,6 @@
         #searchicon {
             width: 30px;
             height: 25px;
-            background-color: rgb(222, 231, 231);
             margin-top: 10px;
         }
 
@@ -61,7 +60,6 @@
         }
 
         .searchicon {
-            background-color: rgb(241, 241, 241);
             width: 50px;
             text-align: center;
             border-top-right-radius: 10px;

@@ -228,7 +228,7 @@ margin-top: 10px;
    }
    //
    console.log("qw=",query);
-     let count=1;
+     let sum=1;
      var productArr=[];
      data.forEach(function(el){
          if(el.name.toUpperCase().includes(query.toUpperCase()))
@@ -283,6 +283,15 @@ margin-top: 10px;
             cartbutton.style.marginTop="50%";
             cartbutton.style.border="none";
             cartbutton.addEventListener("click",function(){
+                let count = JSON.parse(localStorage.getItem("Number")) || 0 ;
+                count++ ;
+                localStorage.setItem("Number",JSON.stringify(count)) ;
+
+                let payment = JSON.parse(localStorage.getItem("payment")) || 0 ;
+                payment  +=  +el.price ;
+                payment = Math.floor(payment) ;
+                localStorage.setItem("payment",JSON.stringify(payment)) ;
+                
                 productArr.push(el);
                 localStorage.setItem("cartProduct",JSON.stringify(productArr));
             });
@@ -297,8 +306,8 @@ margin-top: 10px;
             
          }
          else{
-             count++;
-             if(count==data.length)
+             sum++;
+             if(sum==data.length)
              {
                  console.log("No match");
              }

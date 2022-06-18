@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+    /* margin: 0px; */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(103, 102, 102);
+}
+
+#big_cont{
+    /* display: flex; */
+    /* border: 1px solid red; */
+    margin: auto;
+    width: 80%;
+}
+#small_cont{
+     display: flex;
+     justify-content: space-between;
+     gap: 20px;
+     margin: 20px auto;
+}
+#filter{
+    width: 30%;
+    margin-right: 18px;
+    padding:5px 10px;
+    /* border: 1px solid violet; */
+}
+#filter>div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+#filter>p{
+    color: #10847E;
+    font-weight: 550;
+    font-size: 14px;
+    cursor: pointer;
+}
+#filter>div>input{
+    width: 20px;
+    height: 20px; 
+    margin-top:-1px ;
+}
+#small_search{
+    font-size: larger;
+    height: 38px;
+    width: 70%;
+    margin-bottom: 10px;
+}
+#small_search:focus{
+    outline: none;
+}
+datalist>option{
+    color: red;
+    border: 1px solid red;
+    height: 1000px;
+    background-color: white;
+}
+
+
+.fa-solid{
+    box-sizing: content-box;
+    padding: 10px;
+    width: 8% ;
+    border: 1px solid;
+    border-left-color: white;
+    vertical-align: top;
+    margin-left: -5.6px;
+}
+#covid_tab{
+    width: 80%;
+}
+#essential{
+    display: grid; 
+    grid-template-columns: repeat(3,1fr); 
+    /* grid-template-rows: ; */
+    width: 85%;
+    gap : 20px ;
+    margin-top: 50px;
+}
+#popularity{
+    /* border: 1px solid yellow; */
+    display: flex;
+    justify-content: space-around;
+    /* border: 1px solid black; */
+}
+#popularity>div{
+    margin: auto;
+}
+#select{
+    width: 200px;
+    height: 35px;
+    font-size: 20px;
+}
+#products{
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    padding: 10px;
+    box-sizing: content-box;
+    
+    /* height: 350px; */
+    /* width: ; */
+}
+.btn{
+    width: 100%;
+    background-color: red; ;
+    color: white;
+    height: 40px;
+    /* outline: none; */
+    border: none;
+    font-size: larger;
+    border-radius: 10px;
+    /* position:absolute; */
+    /* bottom: 0px; */
+}
+img{
+    width: 100%;
+    height: 180px;
+}

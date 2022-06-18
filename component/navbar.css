@@ -1,0 +1,101 @@
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+        }
+
+        #navbar {
+            background-color: teal;
+            width: 100%;
+        }
+
+        #navtop {
+            display: flex;
+            /* width: 100%; */
+        }
+
+        .mainlogo {
+            width: 200px;
+            height: 50px;
+            margin-top: 10px;
+        }
+
+        #bar {
+            display: flex;
+            background-color: white;
+            width: 800px;
+            height: 50px;
+            margin-top: 10px;
+            margin-left: 50px;
+            border-radius: 10px;
+        }
+
+        #searchicon {
+            width: 30px;
+            height: 25px;
+            background-color: rgb(222, 231, 231);
+            margin-top: 10px;
+        }
+
+        .fa-solid {
+            margin-top: 15px;
+            font-size: x-large;
+        }
+
+        #select {
+            width: 170px;
+            font-size: larger;
+            border: 1px solid white;
+            border-radius: 10px;
+            color: teal;
+        }
+
+        #searchbar {
+            border: 0px;
+            width: 80%;
+            font-size: larger;
+            padding-left: 5px;
+        }
+
+        #searchbar:focus {
+            outline: none;
+        }
+
+        .searchicon {
+            background-color: rgb(241, 241, 241);
+            width: 50px;
+            text-align: center;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        #navbottom {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 0px 0px 10%;
+            color: white;
+            /* border: 1px solid red; */
+
+        }
+
+        #left {
+            display: flex;
+            /* border: 1px solid violet; */
+            font-size: 18px;
+            font-family: 'Times New Roman', Times, serif;
+            width: 45%;
+            justify-content: space-evenly;
+            margin-left: 12%;
+        }
+
+        #right {
+            display: flex;
+            font-size: large;
+            width: 40%;
+            justify-content: space-evenly;
+        }
+
+        .center {
+            margin-top: -22px;
+            margin-left: 30px;
+        }

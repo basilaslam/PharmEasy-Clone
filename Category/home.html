@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid Essential</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+    <h1>Covid</h1>
+    <div id="big_cont">
+        <div id="small_cont">
+            <!-- 1. Filter part -->
+            <div id="filter">
+                <h1>Filter</h1>
+                <!-- Cetegory -->
+                <h3>Category</h3>
+                <div>
+                    <span>Covid Essentials</span>
+                    <input type="radio" checked>
+                </div>
+                <hr>
+                <!-- Sub category -->
+                <h3>Sub category</h3>
+                <div>
+                    <span>Covid Test kits</span>
+                    <input type="radio">
+                </div>
+                <div>
+                    <span>Disinfectants</span>
+                    <input type="radio">
+                </div>
+                <div>
+                    <span>Home Hyginene Esentials</span>
+                    <input type="radio">
+                </div>
+                <div>
+                    <span>Masks</span>
+                    <input type="radio">
+                </div>
+                <div>
+                    <span>Hand Sanitizers</span>
+                    <input type="radio">
+                </div>
+                <p>View More</p>
+                <hr>
+                <!-- BRANDS -->
+                <h3>Brands</h3>
+                <span>
+                    <input id="small_search" type="search" placeholder="Search" list="search">
+                    <datalist id="search" class="data">
+                        <option value="Avagard">
+                        <option value="Aarshaveda">
+                        <option value="Beurer">
+                        <option value="Bibo">
+                        <option value="colin">
+                        <option value="Dabur">
+                        <option value="Dr.Vaidya">
+                        <option value="Easycare">
+                        <option value="Exo">
+                            
+                    </datalist>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+               
+                <!-- put a search image -->
+                <div>
+                    <span>3m Avagard</span>
+                    <div>
+                        (1)
+                        <input type="checkbox">
+                    </div>
+                    
+                </div>
+                <div>
+                    <span>Aarshaveda</span>
+                    <div>
+                        (1)
+                        <input type="checkbox">
+                    </div>
+                    
+                </div>
+                <div>
+                    <span>Accusure</span>
+                    <div>
+                        (6)
+                        <input type="checkbox">
+                    </div>
+                    
+                </div>
+                <div>
+                    <span>Achoo</span>
+                    <div>
+                        (2)
+                        <input type="checkbox">
+                    </div>
+                    
+                </div>
+                <div>
+                    <span>Adel</span>
+                    <div>
+                        (1)
+                        <input type="checkbox">
+                    </div>
+                </div>
+                <p>View More</p>
+                <hr>
+                <!-- Price -->
+                <h3>Price</h3>
+                <div>
+                    <span>Below 99</span>
+                    <div>
+                        (471)
+                        <input type="checkbox">
+                    </div>
+                </div>
+                <div>
+                    <span>100- 199</span>
+                    <div>
+                        (378)
+                        <input type="checkbox">
+                    </div>
+                </div>
+                <div>
+                    <span>200- 299</span>
+                    <div>
+                        (228)
+                        <input type="checkbox">
+                    </div>
+                </div>
+                <div>
+                    <span>300- 399</span>
+                    <div>
+                        (84)
+                        <input type="checkbox">
+                    </div>
+                </div>
+                <div>
+                    <span>400- 499</span>
+                    <div>
+                        (39)
+                        <input type="checkbox">
+                    </div>
+                </div>
+                <p>View More</p>
+            </div>
+            <!-- 2. Covid Essientials -->
+            <div id="covid_tab">
+                <!-- top bar -->
+                <div id="popularity">
+                    <h1>Covid Essentials</h1>
+                    <div>Sort By:
+                        <select id="select" onchange="filterFun()">
+                            <option value="" >Popularity</option>
+                            <option value="lth">Price low to high</option>
+                            <option value="htl">Price high to low</option>
+                            <option value="dis">Discount</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Product part Append data-->
+                <div id="essential">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    var data  ;
+    let product =JSON.parse(localStorage.getItem("cartProduct")) || []  ;
+    // https://rest-api-medicin.herokuapp.com/products
+    let fetchFun = async () => {
+        let url = `https://rest-api-medicin.herokuapp.com/products`
+        let res = await fetch(url) ;
+        data =await res.json()
+        console.log(data) ;
+        append(data) ;
+        
+    }
+
+    let append = (data)=>{
+        // console.log(data)
+        document.querySelector("#essential").innerHTML =null ;
+    data.forEach(function (ele){
+        
+        let con = document.querySelector("#essential") ;
+        let div= document.createElement("div") ;
+        div.setAttribute("id","products")
+        let image =  document.createElement("img") ;
+        image.src = ele.image1 ;
+
+        let name = document.createElement("h3") ;
+        name.innerText = ele.name ;
+        
+        let price = document.createElement("h4") ;
+        price.innerText ="Rs : " + ele.price ;
+
+        let Add = document.createElement("button") ;
+        Add.setAttribute("class", "btn") ;
+        Add.innerText = "Add To Cart" ; 
+        Add.addEventListener("click", function (){
+           product.push(ele) ;
+           localStorage.setItem("cartProduct",JSON.stringify(product)) ;
+        })
+        div.append(image , name, price, Add) ;
+        con.append(div) ;
+    })
+    }
+
+    fetchFun();
+
+let filterFun =()=>{
+    
+let select = document.querySelector("#select").value ;
+// console.log(data) ;
+if(select=="lth"){
+  let sorted = data.sort(function(a,b){
+    a.price = Number(a.price)
+    b.price = Number(b.price)
+    return a.price-b.price ;
+   
+  }) ;
+   append(sorted) ;
+}
+else if(select=="htl"){
+     sorted = data.sort(function(a,b){
+    a.price = Number(a.price)
+    b.price = Number(b.price)
+    return b.price-a.price ;
+   
+  }) ;
+   append(sorted) ;
+}
+
+}
+
+</script>
+
+<script src="https://kit.fontawesome.com/f36b7b286b.js" crossorigin="anonymous"></script>

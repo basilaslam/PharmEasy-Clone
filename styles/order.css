@@ -9,6 +9,13 @@ body{
     color: rgb(43, 49, 40);
 }
 
+
+#navbottom #left > :nth-child(1){
+    padding-bottom: 5px;
+    border-bottom: 5px solid white;
+}
+
+
 .top_bar {
     display: flex;
     margin-left: 250px;

@@ -3,6 +3,10 @@ body{
     font-family: 'Open Sans', sans-serif;
     margin: 0;
 }
+#navbottom #left > :nth-child(3){
+    padding-bottom: 5px;
+    border-bottom: 5px solid white;
+}
 
 .lab_test{
     margin-left: 25%;

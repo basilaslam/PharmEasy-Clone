@@ -27,11 +27,11 @@
 }
 #searchicon{
     width:30px;
-    height:25px;
-    background-color: rgb(222, 231, 231);
+    height:30px;
+    background-color: #DEE7E7;
 margin-top: 10px;
 }
-#select{
+#bar > #select{
     width:170px;
     font-size: larger;
     border:1px solid white;
@@ -65,9 +65,12 @@ margin-top: 10px;
     color:white;
     font-size: larger;
     font-family:'Times New Roman', Times, serif;
-
     width:520px;
     justify-content: space-between;
+}
+#left a,#right a{
+    text-decoration: none;
+    color: white;
 }
 #right{
     display:flex;
@@ -79,9 +82,15 @@ margin-top: 10px;
   
     
 }
+#right div img{
+    width: 25px;
+}
+#right div{
+    color: white;
+}
 .center{
    
-   margin-top: -22px;
+   margin-top: -35px;
     margin-left: 30px;
    
 

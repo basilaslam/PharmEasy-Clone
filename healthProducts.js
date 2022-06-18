@@ -1,3 +1,9 @@
+import navbar from './component/navbar.js'
+
+
+// Appending Navbar
+document.getElementById('navbar').innerHTML = navbar()
+
 var slideIndex = 1;
 
 var myTimer;

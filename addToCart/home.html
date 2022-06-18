@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Covid Essential</title>
+    <link rel="stylesheet" href="../Basil style/navbar.css">
     <link rel="stylesheet" href="home.css">
 </head>
 
@@ -175,7 +176,11 @@
 
 </html>
 
-<script>
+<script type="module">
+    import navbar from '../component/navbar.js'
+    console.log(navbar);
+
+    document.getElementById('navbar').innerHTML = navbar()
     var data  ; 
     let totalAmount = JSON.parse(localStorage.getItem("payment")) || 0 ;
     let count =JSON.parse(localStorage.getItem("Number")) || 0 ;

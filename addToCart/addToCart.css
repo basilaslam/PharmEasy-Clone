@@ -1,3 +1,6 @@
+body{
+    margin: 0;
+}
 *{
     font-family: sans-serif;
     /* margin: 0px; */
@@ -5,6 +8,9 @@
 #big_con{
     display: flex;
     justify-content: space-around;
+}
+#cartMainContainer{
+    margin-top: 170px;
 }
 /* #cartCards{
     /* position:relative ; 
@@ -26,7 +32,7 @@
     /* z-index: auto; */
     right: 0px;
 }
-img{
+#cartCards img{
     height: 50px;
     width: 50px;
     margin-top: 15px ;

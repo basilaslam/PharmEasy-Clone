@@ -1,3 +1,9 @@
+import navbar from '../component/navbar.js'
+
+
+// Appending Navbar
+document.getElementById('navbar').innerHTML = navbar()
+
 var slideIndex = 1;
 
 var myTimer;
@@ -59,11 +65,11 @@ function showSlides(n){
   dots[slideIndex-1].className += " active";
 }
 
-pause = () => {
+ function pause(){
   clearInterval(myTimer);
 }
 
-resume = () =>{
+function resume(){
   clearInterval(myTimer);
   myTimer = setInterval(function(){plusSlides(slideIndex)}, 4000);
 }

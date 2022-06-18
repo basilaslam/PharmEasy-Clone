@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link rel="stylesheet" href="https://unpkg.com/flickity@2.3.0/dist/flickity.css" >
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="./Basil style/navbar.css">
   <link rel="stylesheet" href="./styles/order.css"> 
   <!-- <link rel="stylesheet" href="./styles/one.css"/>
   <link rel="stylesheet" href="./caro/asset/1.css"/>
@@ -21,26 +22,9 @@
 </head>
 <body>
     <div id="navbar">
-        <div id="navtop">
-            <div id="mainlogo">
-               <a href="index.html"> <img class="mainlogo" src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png" alt=""></a>
-            </div>
-           
+        
         </div>
-        <div id="navbottom">
-            <div id="left">
-                <div>Order Medicines</div>
-                <div>Healthcare Products</div>
-                <div>Lab Tests</div>
-                <div>RTPCR</div>
-            </div>
-            <div id="right">
-                <div><img src="https://assets.pharmeasy.in/web-assets/dist/275c07e1.svg" alt=""><div class="center">Offers</></div></div>
-                <div><img src="https://assets.pharmeasy.in/web-assets/dist/5eb42971.svg" alt=""><div class="center">Login/Signup</div></div>
-                <div><img src="https://assets.pharmeasy.in/web-assets/dist/21b0b5ba.svg" alt=""><div class="center">Cart</div></div>
-            </div>
-        </div>
-        </div>
+
     <div class="top_bar">
         <div class="top_fir">Home</div>
         <div class="top_im">
@@ -70,7 +54,7 @@
             <div></div>
             <input type="text" placeholder="e.g. Ecosprin, Telma or Colgate" class="Search" id="search12345">
            
-            <a class="search" href="#"><img src="https://cdn-icons-png.flaticon.com/128/622/622669.png"  id="searchicon"alt=""></a>
+            <img src="https://img.icons8.com/material-outlined/344/search--v1.png"  id="searchicon"alt="">
             
           </div>
         </div>
@@ -616,8 +600,8 @@
 </html>
 
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-  <script  src="./script/order.js"></script>
-  <script type="module">
+  <script type="module"  src="./script/order.js"></script>
+  <script type="">
       async function getData(query)
 {
    
@@ -634,7 +618,8 @@
     }
 }
   
-document.querySelector("#searchicon").addEventListener("click",function(){
+document.getElementById("searchicon").addEventListener("click",function(el){
+  el.preventDefault();
             var query = document.querySelector("#search12345").value;
             console.log(query);
             localStorage.setItem("search",JSON.stringify(query));
@@ -642,6 +627,7 @@ document.querySelector("#searchicon").addEventListener("click",function(){
             getData();
           
             window.location.href="new.html";
+
 
         });
      

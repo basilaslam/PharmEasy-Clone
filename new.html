@@ -1,94 +1,22 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Basil style/navbar.css">
+    <title>Document</title>
+</head>
+<body>
     <head>
         <title>Search Product List</title>
         <style>
-            
-#navbar{
-    background-color: teal;
-}
-#navtop{
-    display:flex;
-}
-.mainlogo{
-    width:200px;
-    height:50px;
-    margin-top: 10px;
-}
-#bar{
-    display:flex;
-    background-color: white;
-    width:800px;
-    height:50px;
-    margin-top: 10px;
-    margin-left: 50px;
-    border-radius: 10px;
-}
-#searchicon{
-    width:30px;
-    height:25px;
-    background-color: rgb(222, 231, 231);
-margin-top: 10px;
-}
-#select{
-    width:170px;
-    font-size: larger;
-    border:1px solid white;
-  border-radius: 10px;
-  color: teal;
-}
-#searchbar{
-  border:1px solid white;
-    width:600px;
-    font-size: larger;
-}
-.searchicon{
-   background-color: rgb(241, 241, 241);
-    width:50px;
-    text-align: center;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-#navbottom{
-    display:flex;
-     margin-top: 2px; 
-    
-    width:1090px;
-    height:40px;
-    margin-left: 220px;
-    justify-content: space-between;
-    padding-top: 5px;
-}
-#left{
-    display:flex;
-    color:white;
-    font-size: larger;
-    font-family:'Times New Roman', Times, serif;
-
-    width:520px;
-    justify-content: space-between;
-}
-#right{
-    display:flex;
-    color:white;
-    font-size: larger;
-   
-    width:380px;
-    justify-content: space-between;
-  
-    
-}
- 
-
-
-.center{
-   
-   margin-top: -22px;
-    margin-left: 30px;
-   
-
-}
+            body{
+                margin: 0;
+            }
             #showresulttitle{
                 margin-left: 130px;
+                margin-top: 120px;
             }
             #containerall{
            
@@ -121,7 +49,7 @@ margin-top: 10px;
                 border:1px solid gray;
                 margin-top: 15px;
                 border-radius: 5px;
-                padding-left:20px;
+                padding:20px;
             }
            #hrline{
             width:90%;
@@ -135,25 +63,6 @@ margin-top: 10px;
     </head>
     <body>
         <div id="navbar">
-            <div id="navtop">
-                <div id="mainlogo">
-                  <a href="./index.html"> <img class="mainlogo" src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png" alt=""></a> 
-                </div>
-               
-            </div>
-            <div id="navbottom">
-                <div id="left">
-                    <div>Order Medicines</div>
-                    <div>Healthcare Products</div>
-                    <div>Lab Tests</div>
-                    <div>RTPCR</div>
-                </div>
-                <div id="right">
-                    <div><img src="https://assets.pharmeasy.in/web-assets/dist/275c07e1.svg" alt=""><div class="center">Offers</></div></div>
-                    <div><img src="https://assets.pharmeasy.in/web-assets/dist/5eb42971.svg" alt=""><div class="center">Login/Signup</div></div>
-                    <div><img src="https://assets.pharmeasy.in/web-assets/dist/21b0b5ba.svg" alt=""><div class="center">Cart</div></div>
-                </div>
-            </div>
             </div>
         <h3 id="showresulttitle"></h3>
         <div id="containerall">
@@ -161,9 +70,9 @@ margin-top: 10px;
                 <div id="showlist"></div>
             </div>
             <div id="rightcont">
-                <div><b>Please add item(s) to proceed </b></div>
-                <div id="viewcart"><button class="viewcart">View Cart ></button></div>
-                <div id="pres">
+                <div><p id="viewCartText">Please add item(s) to proceed </p></div>
+                <div id="viewcart"><button id="viewcartBtn" class="viewcart">View Cart ></button></div>
+                <div id="pres"> 
                     <p>What is Valid prescription</p>
                     <hr id="hrline">
                     <div id="prescontains">A valid prescription contains</div>
@@ -186,10 +95,12 @@ margin-top: 10px;
                 </div>
             </div>
         </div>
-        
-    </body>
-</html>
-<script src="./script/order.js"></script>
+
+
+
+
+
+<script type="module" src="./script/order.js"></script>
 <script type="module">
          async function getData(query)
 {
@@ -294,6 +205,8 @@ margin-top: 10px;
                 
                 productArr.push(el);
                 localStorage.setItem("cartProduct",JSON.stringify(productArr));
+
+                giveColor()
             });
 
 
@@ -315,5 +228,25 @@ margin-top: 10px;
          }
      });
  }
+
+
+document.getElementById('viewcartBtn').addEventListener('click',(el)=>{
+    location.href = 'addToCart/addToCart.html'
+})
+
+function giveColor(){
+let cartItem = JSON.parse(localStorage.getItem('cartProduct'))
+
+if(cartItem.length > 0){
+   var element =  document.getElementById('viewcartBtn')
+   element.style.backgroundColor = '#008080'
+   let textElement = document.getElementById('viewCartText')
+   textElement.remove()
+}
+}
+
+giveColor()
  
 </script>
+</body>
+</html>

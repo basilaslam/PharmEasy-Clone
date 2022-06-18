@@ -1,3 +1,8 @@
+import navbar from '../component/navbar.js'
+
+
+// Appending Navbar
+document.getElementById('navbar').innerHTML = navbar()
 
 //Step 1: Extracting/Obtaining the array of data objects (that was added to WishList) from localStorage, stored with the key wishlistObj
 var cartProductArr = JSON.parse(localStorage.getItem("cartProduct")) || [];

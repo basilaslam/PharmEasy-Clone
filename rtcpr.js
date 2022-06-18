@@ -1,3 +1,8 @@
+import navbar from './component/navbar.js'
+
+
+// Appending Navbar
+document.getElementById('navbar').innerHTML = navbar()
 thyrocareDiv.style.display = 'none'
 
 var targetDiv = document.getElementById('rtpcr-col-2');

@@ -153,3 +153,75 @@ function hideDeb()
     let hbb = document.querySelector("#debounce");
     hbb.style.visibility="hidden";
 }
+
+// shubham  garg
+document.querySelector("#login").addEventListener("click", loginFun)
+
+function loginFun() {
+    document.querySelector("#cross").style.cursor = "pointer" ;
+    document.querySelector("#login_page").style.display = "block";
+    // document.querySelector("body").addEventListener("click",function(){
+    //     document.querySelector("#navbar").style.display = "fle";
+    // })
+}
+document.querySelector("#cross").addEventListener("click", function (){
+    document.querySelector("#login_page").style.display = "none" ;
+});
+
+
+    //Genrate otp 
+    document.querySelector("#otpbtn").addEventListener("click", function (){
+        document.querySelector("#otp").innerHTML = null
+          var digits = '0123456789';
+          let OTP1  ; let OTP2  ;let OTP3  ;let OTP4  ;
+          OTP1 = digits[Math.floor(Math.random() * 10)];
+          OTP2 = digits[Math.floor(Math.random() * 10)];
+          OTP3 = digits[Math.floor(Math.random() * 10)];
+          OTP4 = digits[Math.floor(Math.random() * 10)];
+    
+          let box = document.querySelector("#otp")
+          let in1 = document.createElement("input") ;
+          in1.style.marginRight = "10px" ;
+          in1.style.fontSize = "larger" ;
+
+          let in2 = document.createElement("input") 
+          in2.style.marginRight = "10px"
+          in2.style.fontSize = "larger" ;
+
+          let in3 = document.createElement("input") 
+          in3.style.marginRight = "10px"
+          in3.style.fontSize = "larger" ;
+
+          let in4 = document.createElement("input") 
+          in4.style.marginRight = "10px"
+          in4.style.fontSize = "larger" ;
+
+          box.append(in1,in2, in3,in4)
+          in1.style.height = "50px"
+          in1.style.width = "50px"
+
+          in2.style.height = "50px"
+          in2.style.width = "50px"
+
+          in3.style.height = "50px"
+          in3.style.width = "50px"
+          
+          in4.style.height = "50px"
+          in4.style.width = "50px"
+
+           setTimeout(function (){
+            in1.value = OTP1 ;
+            in2.value = OTP2 ;
+            in3.value = OTP3 ;
+            in4.value = OTP4 ;
+           }, 2000) ;
+
+           setTimeout(function (){
+            alert("Login Successfull") ;
+            document.querySelector("#login").innerText = "User" ;
+            document.querySelector("#login_page").style.display = "none";
+            // window.location.reload() ;
+           }, 3000)
+
+        
+    });

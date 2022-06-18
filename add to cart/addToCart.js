@@ -5,7 +5,7 @@ let productNumber =  JSON.parse(localStorage.getItem("Number")) ;
 
 document.querySelector("#Number").innerText = productNumber ;
 
-let Payment = JSON.parse(localStorage.getItem("payment")); 
+let Payment = JSON.parse(localStorage.getItem("payment")) || 0; 
 document.querySelector("#payment").innerText ="₹"+Payment ;
 document.querySelector("#payment1").innerText ="₹"+Payment ;
 
@@ -64,12 +64,15 @@ function displayCartList(cartProductArr) {
         removeBtn.src = "https://assets.pharmeasy.in/web-assets/dist/2fb50086.svg"
         removeBtn.setAttribute("class", "remove") ;
         removeBtn.addEventListener("click", function (){
-            Payment -= ele.price ;
-            Payment = Math.floor(Payment) ;
-            localStorage.setItem("payment", JSON.stringify(Payment))
-
             productNumber--
             localStorage.setItem("Number", JSON.stringify(productNumber)) ;
+
+            Payment -= ele.price ;
+            Payment = Math.floor(Payment) ;
+            if(productNumber==0){
+                Payment =0 ;
+            }
+            localStorage.setItem("payment", JSON.stringify(Payment))
 
             cartProductArr.splice(i,1) ;
             localStorage.setItem("cartProduct",JSON.stringify(cartProductArr)) ;

@@ -3,8 +3,9 @@
         <title>Pharm Easy</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="./cbstyles/index.css">
-        <style>
-             #login_page{
+       <!-- Shubham LOgin style -->
+       <style>
+            #login_page{
             width: 100%;
             height: 100vh;
             display: none;
@@ -27,7 +28,7 @@
         }
         #login_page>div{
             width: 45%;
-            background-color: white;
+            background-color:white;
             padding:0px 10px;
             /* margin-left: 60%; */
             position: absolute;
@@ -72,6 +73,7 @@
             font-size: larger
         }
 
+
 </style>
     </head>
     <body>
@@ -79,27 +81,9 @@
         <div id="navbar">
        
         </div>
-        <div id="navbar"></div>
         <!-- shubham login page -->
-        <div id="login_page">
-            <div>
-                <nav>
-                      <img src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png" alt="pharmeasy">
-                    <i class="fa-solid fa-xmark" id="cross"></i>
-                </nav>
-                <div>
-                    <p>Quick Login / Register</p>
-                    <form>
-                    <input type="text" placeholder="Enter your phone number" required>
-                    </form>
-                    <button>Continue</button>
-                    <p>By clicking continue, you agree with our <a href="#"> Privacy Policy </a></p>
-                </div>
-                <div id="otp">
-                <!-- append otp here -->
-                </div>
-            </div>
-        </div>
+        <!-- <div id="navbar"></div> -->
+        
          <!-- shubham login page -->
           <!-- //////////////////////////////     navbar  html   End               ////////////////////////////////////////////// -->
 
@@ -514,9 +498,28 @@
 <!-- //////////////////////     Debouncing Start      ///////////////////////// -->
 <div id="debounce"></div>
 
-
+<div id="login_page">
+    <div>
+        <nav>
+            <img src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png" alt="pharmeasy">
+            <i class="fa-solid fa-xmark" id="cross"></i>
+        </nav>
+        <div>
+            <p>Quick Login / Register</p>
+            <form>
+               <input type="text" placeholder="Enter your phone number" required>
+            </form>
+            <button id="otpbtn">Continue</button>
+            <p>By clicking continue, you agree with our turms and condition<a href="#"> Privacy Policy </a></p>
+        </div>
+        <div id="otp">
+        <!-- append otp here -->
+        </div>
+    </div>
+</div>
     </body>
 </html>
+
 
 
 
@@ -539,80 +542,8 @@ document.querySelector("#navbar").innerHTML=cbnavbar();
         });
         
     </script>
-    <script type="module" src="./cbscripts/home.js"></script>
-    <script>
-        // import navbar from "./component/navbar.js"
-        // document.querySelector("#navbar").innerHTML = navbar() ;
-        // // This is for login & sign up  cross property
-        let log = document.querySelector("#login");
-        log.style.cursor = "pointer"
-        document.querySelector("#cross").style.cursor = "pointer" ;
-        log.addEventListener("click", loginFun)
-    
-        function loginFun() {
-            document.querySelector("#login_page").style.display = "flex";
-            document.querySelector("body").addEventListener("click",function(){
-                document.querySelector("#navbar").style.display = "fle";
-            })
-        }
-        document.querySelector("#cross").addEventListener("click", function (){
-            document.querySelector("#login_page").style.display = "none"
-        });
-    
-        //Genrate otp 
-        document.querySelector("button").addEventListener("click", function (){
-            document.querySelector("#otp").innerHTML = null
-              var digits = '0123456789';
-              let OTP1  ; let OTP2  ;let OTP3  ;let OTP4  ;
-              OTP1 = digits[Math.floor(Math.random() * 10)];
-              OTP2 = digits[Math.floor(Math.random() * 10)];
-              OTP3 = digits[Math.floor(Math.random() * 10)];
-              OTP4 = digits[Math.floor(Math.random() * 10)];
-        
-              let box = document.querySelector("#otp")
-              let in1 = document.createElement("input") ;
-              in1.style.marginRight = "10px" ;
-              in1.style.fontSize = "larger" ;
-    
-              let in2 = document.createElement("input") 
-              in2.style.marginRight = "10px"
-              in2.style.fontSize = "larger" ;
-    
-              let in3 = document.createElement("input") 
-              in3.style.marginRight = "10px"
-              in3.style.fontSize = "larger" ;
-    
-              let in4 = document.createElement("input") 
-              in4.style.marginRight = "10px"
-              in4.style.fontSize = "larger" ;
-    
-              box.append(in1,in2, in3,in4)
-              in1.style.height = "50px"
-              in1.style.width = "50px"
-    
-              in2.style.height = "50px"
-              in2.style.width = "50px"
-    
-              in3.style.height = "50px"
-              in3.style.width = "50px"
-              
-              in4.style.height = "50px"
-              in4.style.width = "50px"
-    
-               setTimeout(function (){
-                in1.value = OTP1 ;
-                in2.value = OTP2 ;
-                in3.value = OTP3 ;
-                in4.value = OTP4 ;
-               }, 2000) ;
-    
-               setTimeout(function (){
-                alert("Login Successfull") ;
-                window.location.reload() ;
-               }, 3000)
-    
-            
-        });
-        
-       
-    </script>
+<script type="module" src="./cbscripts/home.js"></script>
+
+
+   
+<script src="https://kit.fontawesome.com/f36b7b286b.js" crossorigin="anonymous"></script>

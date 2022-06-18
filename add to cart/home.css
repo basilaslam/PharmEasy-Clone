@@ -100,15 +100,15 @@ datalist>option{
 }
 .btn{
     width: 100%;
-    background-color: red; ;
-    color: white;
     height: 40px;
-    /* outline: none; */
     border: none;
     font-size: larger;
     border-radius: 10px;
-    /* position:absolute; */
-    /* bottom: 0px; */
+    
+}
+.btn:hover{
+    background-color: red; ;
+    color: white;
 }
 img{
     width: 100%;

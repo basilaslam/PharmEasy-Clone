@@ -26,7 +26,7 @@ function navbar(){
     <div id="right">
         <div>
         <img src="https://assets.pharmeasy.in/web-assets/dist/275c07e1.svg" alt="">
-            <div class="center"><a href='#'>Offers</a></div>
+            <div class="center"><a href='offers.html'>Offers</a></div>
             </div>
         
         <div>

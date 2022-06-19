@@ -3,6 +3,7 @@
         <title>Pharm Easy</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="./cbstyles/index.css">
+        <link rel="stylesheet" href="./Basil style/navbar.css">
        <!-- Shubham LOgin style -->
        <style>
             #login_page{
@@ -79,7 +80,6 @@
     <body>
         <!-- //////////////////////////////     navbar  html    ////////////////////////////////////////////// -->
         <div id="navbar">
-       
         </div>
         <!-- shubham login page -->
         <!-- <div id="navbar"></div> -->
@@ -524,10 +524,10 @@
 
 
 <script type="module">
-        import cbnavbar from "./cbscripts/index.js";
+        import navbar from './component/navbar.js'
         import {getData} from "./cbscripts/index.js";
 
-document.querySelector("#navbar").innerHTML=cbnavbar();
+document.querySelector("#navbar").innerHTML=navbar();
 
        
         document.querySelector(".searchicon").addEventListener("click",function(){

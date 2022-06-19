@@ -31,7 +31,7 @@ function navbar(){
         
         <div>
         <img src="https://assets.pharmeasy.in/web-assets/dist/5eb42971.svg" alt="">
-            <div class="center" id="login"><a href='login1.html'>Signup / Login</a></div>
+            <div class="center" id="login"><a href='#'>Signup / Login</a></div>
         </div>
         <div>
         <img src="https://assets.pharmeasy.in/web-assets/dist/21b0b5ba.svg" alt="">

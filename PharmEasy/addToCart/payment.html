@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Payment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body{
+            margin: 0;
+        }
+        #payment-navbar {
+            background-color: teal;
+            display: flex;
+            justify-content: space-between;
+            height: 100px;
+            width: 100%;
+            
+        }
+
+        #payment-logo  img {
+            width: 150px;
+            margin-left: 20px;
+            margin-top: 20px;
+            object-fit: contain;
+        }
+
+        #secure-payments {
+            display: flex;
+            
+        }
+
+        #secure-payments > p {
+            font-size: 16px;
+            color: white;
+            font-family: sans-serif;
+            margin-right: 45px;
+            font-weight: 300;
+            padding-left: 20px;
+            margin-top: 38px;
+        }
+
+        #star {
+            height: 30px;
+            width: 30px;
+            margin-top: 30px;
+        }
+
+        /* <!-- BODY SECTION --> */
+
+        #outer-container {
+            display: flex;
+        }
+
+        #main-column {
+            width: 700px;
+            margin-left: 150px;
+        }
+
+        .paymentCard {
+            display: flex;
+            /* border: 1px solid red; */
+            width: 70%;
+            margin-bottom: 10px;
+            /* margin-left: 10px; */
+        }
+
+        .paymentOptionsLogo {
+            height: fit-content;
+            width: 45px;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        .paymentOption {
+            margin-left: 30px;
+        }
+
+        .paymentOptionsTextDiv {
+            font-family: sans-serif;
+            font-weight: 300;
+            color: rgb(92, 86, 86);
+            border-bottom-color: rgb(92, 86, 86);
+            border-bottom-width: thin;
+            border-bottom-style: dotted;
+            width: 650px;
+        }
+
+        .paymentSubheading {
+            font-size: 13px;
+            margin-left: 30px;
+            font-weight: 200;
+            color: rgb(121, 117, 117);
+        }
+
+        #top-half h3 {
+            font-size: 28px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-family: sans-serif;
+            font-weight: 400;
+            color: rgb(92, 86, 86);
+            
+        }
+
+        #bottom-half h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-family: sans-serif;
+            font-weight: 500;
+            color: rgb(92, 86, 86);
+        }
+
+        .subLogo {
+            height: fit-content;
+            width: 45px;
+            padding-left: 20px;
+        }
+
+
+
+        #side-bar h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            font-family: sans-serif;
+            font-weight: 550;
+            color: rgb(92, 86, 86);
+        }
+
+        #side-bar img {
+            margin-top: 30px;
+            margin-left: 0;
+        }
+
+        #cartValueDiv, #deliveryChargeDiv, #totalAmountDiv {
+            display: flex;
+            justify-content: space-between;
+            font-size: 15px;
+            font-family: sans-serif;
+            font-weight: 400;
+            color: rgb(92, 86, 86);
+        }
+
+        #linkWalletBtn {
+            height: 45px;
+            width: 130px;
+            background-color: teal;
+            color: white;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 40px;
+            border-radius: 5px;
+            border: 0;
+            font-family: sans-serif;
+            font-weight: 550;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- PAYMENT NAVBAR -->
+    <div id="payment-navbar">
+        <div id="payment-logo">
+           <a href="../index.html"> <img src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png"></a>
+        </div>
+        <div id="secure-payments">
+            <img id="star" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Empty_Star.svg/640px-Empty_Star.svg.png">
+            <p>100% Secure Payments</p>
+        </div>
+    </div>
+
+    <!-- BODY SECTION -->
+    <div id="outer-container">
+        <div id="main-column">
+            <div id="top-half">
+                <h3>
+                    Offers
+                </h3>
+                <div>
+                    <!-- PAYTM -->
+                    <div class="paymentCard">
+                        <div class="paymentOptionsLogoDiv">
+                            <img class="paymentOptionsLogo" src="https://cdn.pharmeasy.in/payments/wallet_icons/paytm.png">
+                        </div>
+                        <div class="paymentOptionsTextDiv">
+                            <h4 class="paymentOption">
+                                Paytm Wallet | Postpaid
+                            </h4>
+                            <p class="paymentSubheading">
+                                Get upto Rs 300 cashback on minimum transactions of Rs 600. Offer available once per user
+                            </p>
+                            <div id="linkWalletDiv">
+                                
+                            </div>  
+                        </div>
+                    </div>
+                    <!-- Amazon Pay -->
+                    <div class="paymentCard">
+                        <div class="paymentOptionsLogoDiv">
+                            <img class="paymentOptionsLogo" src="https://cdn.pharmeasy.in/payments/amazonpay_new.png">
+                        </div>
+                        <div class="paymentOptionsTextDiv">
+                            <h4 class="paymentOption">
+                                Amazon Pay
+                            </h4>
+                            <p class="paymentSubheading">
+                                Get upto Rs 300 cashback on minimum transactions of Rs 600. Offer available once per user
+                            </p>
+                        </div>
+                    </div>
+                    <!-- PhonePe -->
+                    <div class="paymentCard">
+                        <div class="paymentOptionsLogoDiv">
+                            <img class="paymentOptionsLogo" src="https://cdn.pharmeasy.in/payments/wallet_icons/phonepe.png">
+                        </div>
+                        <div class="paymentOptionsTextDiv">
+                            <h4 class="paymentOption">
+                                PhonePe
+                            </h4>
+                            <p class="paymentSubheading">
+                                Get upto Rs 300 cashback on minimum transactions of Rs 600. Offer available once per user
+                            </p>
+                        </div>
+                    </div>
+                    <!-- MobiKwik -->
+                    <div class="paymentCard">
+                        <div class="paymentOptionsLogoDiv">
+                            <img class="paymentOptionsLogo" src="https://cdn.pharmeasy.in/payments/wallet_icons/mobikwik.png">
+                        </div>
+                        <div class="paymentOptionsTextDiv">
+                            <h4 class="paymentOption">
+                                MobiKwik
+                            </h4>
+                            <p class="paymentSubheading">
+                                Get upto Rs 300 cashback on minimum transactions of Rs 600. Offer available once per user
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="bottom-half">
+                <h3>
+                    Other Options
+                </h3>
+                <div>
+                    <!-- UPI -->
+                    <div class="paymentCard">
+                        <div class="paymentOptionsLogoDiv">
+                            <img class="paymentOptionsLogo" src="https://cdn.pharmeasy.in/payments/upi.png">
+                        </div>
+                        <div class="paymentOptionsTextDiv">
+                            <h4 class="paymentOption">
+                                UPI
+                            </h4>
+                            <!-- <p class="paymentSubheading">
+                                Get upto Rs 300 cashback on minimum transactions of Rs 600. Offer available once per user
+                            </p> -->
+                            <div class="subLogosDiv">
+                                <img class="subLogo" src="https://consumer-app-images.pharmeasy.in/payment-icons/gpay.png">
+                                <img class="subLogo" src="https://consumer-app-images.pharmeasy.in/payment-icons/bhim.png">
+                                <img class="subLogo" src="https://consumer-app-images.pharmeasy.in/payment-icons/paytmUpi.png">
+                                <img class="subLogo" src="https://consumer-app-images.pharmeasy.in/payment-icons/phonepeUpi.png">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Wallets -->
+                    <div class="paymentCard">
+                        <div class="paymentOptionsLogoDiv">
+                            <img class="paymentOptionsLogo" src="https://cdn.pharmeasy.in/payments/wallet.png">
+                        </div>
+                        <div class="paymentOptionsTextDiv">
+                            <h4 class="paymentOption">
+                                Wallets
+                            </h4>
+                            <!-- <p class="paymentSubheading">
+                                Get upto Rs 300 cashback on minimum transactions of Rs 600. Offer available once per user
+                            </p> -->
+                            <div class="subLogosDiv">
+                                <img class="subLogo" src="https://consumer-app-images.pharmeasy.in/payment-icons/amazonpay.png">
+                                <img class="subLogo" src="https://consumer-app-images.pharmeasy.in/payment-icons/paytm.png">
+                                <img class="subLogo" src="https://consumer-app-images.pharmeasy.in/payment-icons/freecharge-wallet.png">
+                                <img class="subLogo" src="https://consumer-app-images.pharmeasy.in/payment-icons/phonepeWallet.png">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Credit/Debit Card -->
+                    <div class="paymentCard">
+                        <div class="paymentOptionsLogoDiv">
+                            <img class="paymentOptionsLogo" src="https://cdn.pharmeasy.in/payments/card.png">
+                        </div>
+                        <div class="paymentOptionsTextDiv">
+                            <h4 class="paymentOption">
+                                Credit/Debit Card
+                            </h4>
+                            <!-- <p class="paymentSubheading">
+                                Get upto Rs 300 cashback on minimum transactions of Rs 600. Offer available once per user
+                            </p> -->
+                            <div class="subLogosDiv">
+                                <img class="subLogo" src="https://consumer-app-images.pharmeasy.in/payment-icons/visa.png">
+                                <img class="subLogo" src="https://consumer-app-images.pharmeasy.in/payment-icons/mastercard-logo.png">
+                                <img class="subLogo" src="https://consumer-app-images.pharmeasy.in/payment-icons/rupay.png">
+                                <img class="subLogo" src="https://consumer-app-images.pharmeasy.in/payment-icons/maestro-logo.png">
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Net Banking -->
+                    <div class="paymentCard">
+                        <div class="paymentOptionsLogoDiv">
+                            <img class="paymentOptionsLogo" src="https://cdn.pharmeasy.in/payments/netbanking.png">
+                        </div>
+                        <div class="paymentOptionsTextDiv">
+                            <h4 class="paymentOption">
+                                Net Banking
+                            </h4>
+                            <p class="paymentSubheading">
+                                We support over 100 banks
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Cash on Delivery -->
+                    <div class="paymentCard">
+                        <div class="paymentOptionsLogoDiv">
+                            <img class="paymentOptionsLogo" src="https://consumer-app-images.pharmeasy.in/payment-icons/cod.png">
+                        </div>
+                        <div class="paymentOptionsTextDiv">
+                            <h4 class="paymentOption">
+                                Cash on Delivery
+                            </h4>
+                            <p class="paymentSubheading">
+                                Pay via Cash/UPI at time of delivery
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="side-bar">
+            <img src="./image/order.jpeg" style="cursor: pointer;">
+            <h3>
+                Price Breakdown
+            </h3>
+            <div id="paymentPriceDiv">
+                <div id="cartValueDiv">
+                    <p>
+                        Cart Value
+                    </p>
+                    <p id="cartValuePrice">
+                        <!-- Append here cart value -->
+                        
+                    </p>
+                </div>
+                <div id="deliveryChargeDiv">
+                     <p>
+                        Delivery Charge
+                     </p>
+                    <p>
+                        ₹49.00
+                    </p>
+                </div>
+                <div id="totalAmountDiv">
+                    <p>
+                        Amount to be paid
+                    <p>
+                    <p id="deliveryChargePrice">
+                        <!-- Append Total Amount -->
+                    </p>
+                </div>
+                <img id="savingsPic" src="./image/pharmEasy.jpeg" style="cursor:pointer ;">
+            </div>
+        </div>    
+    </div>
+    
+
+</body>
+</html>
+<script src="./payment.js"></script>

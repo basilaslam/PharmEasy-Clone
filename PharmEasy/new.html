@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Basil style/navbar.css">
+    <title>Document</title>
+</head>
+<body>
+    <head>
+        <title>Search Product List</title>
+        <style>
+            body{
+                margin: 0;
+            }
+            #showresulttitle{
+                margin-left: 130px;
+                margin-top: 120px;
+            }
+            #containerall{
+           
+                display:flex;
+                width:80%;
+                margin:auto;
+            }
+            #leftcont{
+              
+                width:50%;
+                
+            }
+            #rightcont{
+              
+                width:350px;
+                margin-left: 100px;
+            }
+            .viewcart{
+                width:100%;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                margin-top: 20px;
+                background-color: grey;
+                border:none;
+                color:white;
+                font-weight: bold;
+                border-radius: 5px;
+            }
+            #pres{
+                border:1px solid gray;
+                margin-top: 15px;
+                border-radius: 5px;
+                padding:20px;
+            }
+           #hrline{
+            width:90%;
+           }
+           #comb{
+            display:flex;
+            column-gap: 30px;
+            margin-top: 20px;
+           }
+        </style>
+    </head>
+    <body>
+        <div id="navbar">
+            </div>
+        <h3 id="showresulttitle"></h3>
+        <div id="containerall">
+            <div id="leftcont">
+                <div id="showlist"></div>
+            </div>
+            <div id="rightcont">
+                <div><p id="viewCartText">Please add item(s) to proceed </p></div>
+                <div id="viewcart"><button id="viewcartBtn" class="viewcart">View Cart ></button></div>
+                <div id="pres"> 
+                    <p>What is Valid prescription</p>
+                    <hr id="hrline">
+                    <div id="prescontains">A valid prescription contains</div>
+                    <div id="comb">
+                        <div id="carton"><img src="https://assets.pharmeasy.in/web-assets/dist/bb422239.svg" alt="" class="carton"></div>
+                        <div id="cartondet">Doctor Details</div>
+                    </div>
+                    <div id="comb">
+                        <div id="carton"><img src="https://assets.pharmeasy.in/web-assets/dist/2a2b3a73.svg" alt="" class="carton"></div>
+                        <div id="cartondet">Date of Prescription</div>
+                    </div>
+                    <div id="comb">
+                        <div id="carton"><img src="https://assets.pharmeasy.in/web-assets/dist/03a8fd62.svg" alt="" class="carton"></div>
+                        <div id="cartondet">Patient Details</div>
+                    </div>
+                    <div id="comb">
+                        <div id="carton"><img src="https://assets.pharmeasy.in/web-assets/dist/598e39e8.svg" alt="" class="carton"></div>
+                        <div id="cartondet">Dosasge Details</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+<script type="module" src="./script/order.js"></script>
+<script type="module">
+         async function getData(query)
+{
+   
+    try{
+      //  
+        let url="https://rest-api-medicin.herokuapp.com/products";
+        let res = await fetch(url);
+        let data = await res.json();
+        console.log("data=",data);
+        return data;
+    }
+    catch(err){
+        console.log("Error");
+    }
+}
+
+    let x=await getData();
+  
+    console.log("x=",x);
+    
+    appendSearch(x);
+    
+ function appendSearch(data)
+ {
+   // document.querySelector("#showlist").innerHTML=null;
+    
+   let query = JSON.parse(localStorage.getItem("search"));
+   
+   if(query)
+   {
+    document.querySelector("#showresulttitle").innerText="Showing all results for"+" "+query;
+   }
+   else{
+    document.querySelector("#showresulttitle").innerText="Showing all results for medicine";
+   }
+   //
+   console.log("qw=",query);
+     let sum=1;
+     var productArr=[];
+     data.forEach(function(el){
+         if(el.name.toUpperCase().includes(query.toUpperCase()))
+         {
+           
+             console.log("Match");
+             let box =  document.createElement("div");
+             box.className="medicinebox";
+             box.style.border="1px solid gray";
+             box.style.borderRadius="5px";
+             box.style.display="flex";
+             box.style.marginBottom="20px";
+
+             let photo = document.createElement("div");
+             photo.style.width="150px";
+
+             let theory = document.createElement("div");
+             theory.style.width="250px";
+
+             let cart = document.createElement("div");
+             cart.style.width="150px";
+ 
+             let image = document.createElement("img");
+             image.src = el.image2;
+             image.style.width="70px";
+             image.style.marginTop="30px";
+
+              let image1 = document.createElement("img");
+              image1.src = el.image1;
+              image1.style.width="70px";
+              image1.style.marginTop="30px";
+
+              photo.append(image1,image);
+
+             let name = document.createElement("h2");
+             name.innerText=el.name;
+             let price = document.createElement("h3");
+             price.innerText = "Rs"+" "+el.price;
+             price.style.color="red";
+ 
+            theory.append(name,price);
+
+            let cartbutton = document.createElement("button");
+            cartbutton.innerText="Add To Cart";
+            cartbutton.style.padding="10px";
+            cartbutton.style.paddingRight="20px";
+            cartbutton.style.paddingLeft="20px";
+            cartbutton.style.backgroundColor="teal";
+            cartbutton.style.color="white";
+            cartbutton.style.fontWeight="bold";
+            cartbutton.style.borderRadius="5px";
+            cartbutton.style.marginTop="50%";
+            cartbutton.style.border="none";
+            cartbutton.addEventListener("click",function(){
+                let count = JSON.parse(localStorage.getItem("Number")) || 0 ;
+                count++ ;
+                localStorage.setItem("Number",JSON.stringify(count)) ;
+
+                let payment = JSON.parse(localStorage.getItem("payment")) || 0 ;
+                payment  +=  +el.price ;
+                payment = Math.floor(payment) ;
+                localStorage.setItem("payment",JSON.stringify(payment)) ;
+                
+                productArr.push(el);
+                localStorage.setItem("cartProduct",JSON.stringify(productArr));
+
+                giveColor()
+            });
+
+
+            cart.append(cartbutton);
+
+             box.append(photo,theory,cart);
+            console.log("box",box);
+            document.querySelector("#showlist").append(box);
+        
+            
+         }
+         else{
+             sum++;
+             if(sum==data.length)
+             {
+                 console.log("No match");
+             }
+           
+         }
+     });
+ }
+
+
+document.getElementById('viewcartBtn').addEventListener('click',(el)=>{
+    location.href = 'addToCart/addToCart.html'
+})
+
+function giveColor(){
+let cartItem = JSON.parse(localStorage.getItem('cartProduct'))
+
+if(cartItem.length > 0){
+   var element =  document.getElementById('viewcartBtn')
+   element.style.backgroundColor = '#008080'
+   let textElement = document.getElementById('viewCartText')
+   textElement.remove()
+}
+}
+
+giveColor()
+ 
+</script>
+</body>
+</html>

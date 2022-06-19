@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+body{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+#navbottom #left > :nth-child(3){
+    padding-bottom: 5px;
+    border-bottom: 5px solid white;
+}
+
+.lab_test{
+    margin-left: 25%;
+    margin-top: 200px;
+}
+.carousel,.owl-dots{
+    margin-left: 150px;
+  
+}
+.owl-stage-outer{
+    margin-top: 30px;
+    padding-left: 70px;
+    padding-right: 650px;
+    position: relative;
+}
+.owl-carousel{
+    width: 40%;
+}
+.owl-prev{
+position: absolute;
+top: 40%;
+left: 0;
+font-size: 40px;
+}
+.owl-prev img{
+    transform: rotate(3.142rad);
+}
+
+.owl-next{
+    position: absolute;
+    right: -134px;
+    top: 40%;
+
+}
+
+.offerFilters{
+    display: flex;
+    width: 1024px;
+    gap: 20px;
+    margin-top: 30px;
+}
+.filter{
+    padding: 0 30px;
+    border-radius: 40px;
+    border: 1px solid #4f585e;
+    height: 80px;
+    width: 240px;
+    display: flex;
+    align-items: center;
+    line-height: 1.5;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.filter img{
+    margin-right: 10px;
+}
+
+
+
+.offer{
+    width: 70%;
+    display: flex;
+    gap: 20px;
+    background-color: #8472E1;
+    padding: 14px 10px 5px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.sections{
+    display: flex;
+    gap: 20px;
+
+}
+.section{
+    border: .1px solid #727577;
+    padding: 20px;
+    border-radius: 5px;
+    width: 200px;
+    height: 170px;
+    margin-top: 20px;
+
+}
+.section  p{
+    font-size: 15px;
+
+}
+
+.section:hover{
+    border-color: #10847E;
+}
+.faded{
+    color: #727577;
+    font-size: 12px;
+}
+
+.price{
+    display: block;
+    font-weight: 600;
+}
+.subtitle{
+    font-size: 20px;
+    font-weight: 500px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.fullimg{
+    width: 80px;
+    margin: 0;
+    height: 35px;
+    object-fit: cover;
+}
+
+.span_div{
+    line-height: 1.5;
+}
+
+.h1mod{
+    font-family: Open Sans,sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #4f585e;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.divTop15{
+    margin-top: 15px;
+}
+
+.info{
+    width: 80%;
+    color: #4F585E;
+    font-size: 16px;
+
+}
+.info ul{
+    list-style: none;
+    margin-left: 25px;
+
+}
+.info li::before{
+    content: "\2022";
+    color: #3bb896;
+    font-weight: 600;
+    display: inline-block;
+    width: 20px;
+    margin-left: -20px;
+    font-family: Arial,sans-serif;
+    box-shadow: none;
+
+}
+
+.info li .span_div span a{
+    text-decoration: none;
+    color: #3bb896;
+}
+
+.qna{
+    border: 1px solid #dfe3e6;
+    border-radius: 6px;
+    padding: 10px 20px;
+    margin: 15px 0;
+    font-size: 14px;
+    width: 80%;
+}
+.qnaShow{
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.qnaShow img{
+float: right;
+
+}
+.qna span{
+    color: #727577;
+}
+.qnaShow span{
+    color: black;
+}
+.comments_wrapper{
+    background-color:#F5F6FB ;
+}
+.subtitle_btm{
+    margin-left: 23%;
+    font-size: 24px;
+    font-weight: 700;
+    padding-top: 70px;
+    margin-bottom: 0;
+}
+.comments{
+    margin-left: 25%;
+    display: flex;
+    width: 1000px;
+    color: #9DA9B3;
+}
+
+
+
+.comment{
+display: flex;
+padding: 10px;
+}
+.comment .left img{
+    width: 70px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.comment_text{
+    font-size: 16px;
+
+}
+.comment_text::before{
+    content: "\201C";
+}
+.comment_text::after{
+    content: "\201D";
+}
+
+.comment_name{
+    color: black;
+}
+
+.speciality .carousel{
+    margin-left: 25%;
+    width: 65%;
+}
+.special{
+    
+    width: 425px;
+}
+
+.special .top img{
+    width: 250px;
+    max-width: 100%;
+    max-height: 136px;
+    margin: 0;
+}
+.special .bottom h2{
+    color: #000;
+}
+.special .bottom p{
+    color: #727577;
+}
+
+
+.speciality > div > div.owl-nav > button.owl-next > img{
+    margin-right: 150px;
+}
+
+.benefits_cards{
+    margin-top: 30px;
+    margin-left: 25%;
+    display: flex;
+    gap: 30px;
+    color: #727577;
+}
+.benefits_cards .card{
+    width: 240px;
+    line-height: 1.5;
+}
+.benefits_cards .card .top h3{
+    font-weight: 100;
+}
+.benefits_cards .card .bottom p{
+    font-size: 16px;
+}
+
+
+.blankSpace{
+    height: 500px;
+}
+
+
+.affordable > .sections  .section > .top > img{
+    width: 50px;
+}
+.affordable > .sections  .section p{
+    font-size: 14px;
+}
+.affordable > .sections  .section{
+    position: relative;
+    margin-top: 0;
+}
+.affordable > .sections  .section .price{
+    position: absolute;
+    bottom: 0px;
+}
+
+.affordable .carousel{
+    margin-left: -70px;
+}
+.affordable .owl-carousel{
+    width: 75%;
+}
+.affordable .owl-item{
+    width: 250px;
+}
+
+.comments > .comment  .top > img{
+    width: 50px;
+}
+.comments > .comment  .section p{
+    font-size: 14px;
+}
+.comments > .comment {
+    position: relative;
+    margin-top: 0;
+    line-height: 1.5;
+    width: 250px;
+}
+
+
+.comments .carousel{
+    margin-left: -70px;
+}
+.comments .owl-carousel{
+    width: 100%;
+}
+
+
+
+        /* -----------------------------APP BENEFITS SECTION ------------------------------ */
+        #appBenefits {
+            display: flex;
+            width: 70%;
+            margin: auto;
+            margin-top: 30px;
+        }
+
+        .appBenefitsCard  {
+            /* width: 150px; */
+            padding-left: 30px;
+            margin-left: 40px;
+            text-align: left;
+            font-weight: 100;
+            color: #5f676d;
+            font-family: sans-serif;
+            margin-bottom: 20px;
+            
+            /* border: 1px solid red; */
+
+        }
+
+        .appBenefitsCard > h4 {
+            font-family: sans-serif;
+            font-weight: 530;
+        }
+
+        #downloadAppSection {
+            display: flex;
+            margin-left: 300px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        
+        #appLinks {
+            margin-left: 100px;
+            width: 600px;
+            margin-top: 30px;
+            /* border: 1px solid red; */
+        }
+
+        #appLinks > h2 {
+            margin-left: 18px;
+            font-family: sans-serif;
+            font-weight: 300;
+            color: #4f585e;
+        }
+
+        #app-store-container {
+            display: flex;
+            margin-top: 40px;
+        }
+
+        .AppStoreDiv {
+            display: flex;
+            width: 180px;
+            align-items: center;
+            height: 56px;
+            border-radius: 10px;
+            /* margin-left: 30px; */
+            margin-left: 15px;
+            background-color: #4a4a4a;
+            /* border: 1px solid green; */
+            padding-left: 20px;
+        }
+
+        .AppStoreDiv > p {
+            margin-left: 15px;
+            font-family: sans-serif;
+            color: white;
+        }
+
+
+        /*-----------------------------------  FOOTER SECTION STARTS------------------------------------------------*/
+          #healthcare-footer {
+            background-color: rgb(243, 255, 255);
+            font-family: sans-serif;
+            font-size: 16px;
+            font-weight: 250;
+            height: 600px;
+            display: flex;
+            /* width: 80%; */
+            margin: auto;
+        }
+
+        .footerColumns {
+            margin-left: 120px;
+        }
+
+        #socialIconsContainer {
+            display: flex;
+        }
+        .socialIcons {
+            width: 30px;
+            height: 30px;
+            margin-left: 20px;
+        }
+
+       /*----------------------------------------------------  FOOTER SECTION ENDS----------------------------------------------------*/
+
+         /*------------------------ Footer: Payment Partners Section --------------------*/
+
+         #paymentPartnerSection {
+            background-color: rgb(243, 255, 255);
+            height: 150px;
+        }
+
+        #paymentPartners {
+            display: flex;
+            margin-left: 80px;
+        }
+
+        #paymentPartnersHeader {
+            margin-left: 100px;
+            font-family: sans-serif;
+            font-weight: 400;
+            margin-top: 0;
+            color: #4a4a4a;
+            font-weight: 600;
+        }
+
+        .paymentPartnerLogo {
+            height: 48px;
+            width: 48px;
+            padding-left: 20px;
+            margin-top: 15px;
+        }
+
+        #paymentPartners h3 {
+            margin-left: 50px;
+            font-family: sans-serif;
+            font-weight: 400;
+            color: #4a4a4a;
+
+        }
+        #paymentPartners > img{
+            object-fit: contain;
+        }
+        hr{
+            margin: 0;
+        }
+
+

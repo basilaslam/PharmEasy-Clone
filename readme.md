@@ -1,7 +1,7 @@
 # Inspired from PharmEasy.com
 
 This is Collabrated project and accociated with Masai Shcool.
-Our main objective is to complete all main functionality of pharmeasyy.com, such as User Authentication,order medicine page,rtpcr test page Add to Cart/ Buy and filter, Sorting of the products, Cart page, Checkout page and payment in a given time constraints.
+Our main objective is to complete all main functionality of pharmeasy.com, such as User Authentication,order medicine page,rtpcr test page, filter and Sorting of the products, Cart page, Checkout page and payment in a given time constraints.
 
 - [Click here](https://pharmeasy-clone1.vercel.app/) to see preview of our project.
 
@@ -86,7 +86,7 @@ PharmEasy.com is an e-commerce web application that widely provides e-pharmacy, 
   <hr>
    <h4>RTPCR Page</h4>
   
-   ![ScreenShot currently unavailable](https://github.com/basilaslam/PharmEasy/blob/main/PharmEasy/styles/rtpcr.JPG)
+   ![ScreenShot currently unavailable](https://github.com/basilaslam/PharmEasy/blob/main/PharmEasy/styles/rtpcrpm.JPG)
    
    
    

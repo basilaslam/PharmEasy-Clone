@@ -1,0 +1,549 @@
+<html>
+    <head>
+        <title>Pharm Easy</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./cbstyles/index.css">
+        <link rel="stylesheet" href="./Basil style/navbar.css">
+       <!-- Shubham LOgin style -->
+       <style>
+            #login_page{
+            width: 100%;
+            height: 100vh;
+            display: none;
+            border: 1px solid blue;
+            background-color:#00000011 ;
+            position: absolute;
+            top: 0px;            
+        } 
+        #login_page>div>nav{
+            height: 20%;
+        }
+        #cross{
+            font-size: x-large;
+            margin-right: 5px;
+        }
+        #login_page>div>nav>img{
+            width: 45%;
+            height: 50%;
+            margin: auto ;
+        }
+        #login_page>div{
+            width: 45%;
+            background-color:white;
+            padding:0px 10px;
+            /* margin-left: 60%; */
+            position: absolute;
+            right: 0px;
+            height: 100%;
+        }
+        #login_page>div>nav{
+            background-color: teal;
+            color: white;
+            display: flex;
+        }
+            
+        #login_page>div>div>form>input{
+            height:50px ;
+            width: 98%;
+            padding:0px 0px 0px 10px;
+            margin:30px 0px ;
+            border-radius:10px ;
+            border-color:gray;
+            border-style: double;
+            font-size: larger;
+        }
+        #login_page>div>div{
+            padding: 20px;
+        }
+        #login_page>div>div>p:first-child{
+            margin-top: 10px;
+            font-size: x-large;
+        }
+        input:focus{
+             outline: none; 
+        }
+        #login_page>div>div>button{
+            width: 98%;
+            height: 50px;
+            background-color: teal;
+            color: white;
+            border-radius:10px ;
+            border-color:gray;
+            border-style: double;
+            margin-bottom: 10px;
+            font-size: larger
+        }
+
+
+</style>
+    </head>
+    <body>
+        <!-- //////////////////////////////     navbar  html    ////////////////////////////////////////////// -->
+        <div id="navbar">
+        </div>
+        <!-- shubham login page -->
+        <!-- <div id="navbar"></div> -->
+        
+         <!-- shubham login page -->
+          <!-- //////////////////////////////     navbar  html   End               ////////////////////////////////////////////// -->
+
+           <!-- //////////////////////////////     Slide Image   html  start         ////////////////////////////////////////////// -->
+
+           <div class="slideimage">
+            <!-- image slider start -->
+           <div class="slider">
+               <div class="slides">
+                   <!-- radio button start -->
+                   <input type="radio" name="radio-btn" id="radio1">
+                   <input type="radio" name="radio-btn" id="radio2">
+                   <input type="radio" name="radio-btn" id="radio3">
+                   <input type="radio" name="radio-btn" id="radio4">
+                  
+                   <!-- radio button end -->
+                   <!-- slide image start -->
+                   <div class="slide first">
+                       <img class="imagesize" src="https://cms-contents.pharmeasy.in/banner/11968e3c347-MEGA20_Dweb.jpg?dim=1440x0&dpr=1&q=100" alt="">
+                   </div>
+                   <div class="slide">
+                       <img class="imagesize" src="https://cms-contents.pharmeasy.in/banner/5aeebb1a134-Dweb2.jpg?dim=1440x0&dpr=1&q=100" alt="">
+                   </div>
+
+                   <div class="slide">
+                       <img class="imagesize" src="https://cms-contents.pharmeasy.in/banner/b287e359a6f-Dweb.jpg?dim=1440x0&dpr=1&q=100" alt="">
+                   </div>
+
+                   <div class="slide">
+                       <img class="imagesize" src="https://cms-contents.pharmeasy.in/banner/374ed4b3c4e-Liveasy_diabetic_Dweb.jpg?dim=1440x0&dpr=1&q=100" alt="">
+                   </div>
+                   
+                   <!-- slide image end -->
+                   <!-- automatic navigation start -->
+                   <div class="navigation-auto">
+                       <div class="auto-btn1"></div>
+                       <div class="auto-btn2"></div>
+                       <div class="auto-btn3"></div>
+                       <div class="auto-btn4"></div>
+                   
+                   </div>
+                   <!-- automatic navigation end -->
+               </div>
+                   <!-- manual navigation start -->
+                   <div class="navigation-manual">
+                       <label for="radio1" class="manual-btn"></label>
+                       <label for="radio2" class="manual-btn"></label>
+                       <label for="radio3" class="manual-btn"></label>
+                       <label for="radio4" class="manual-btn"></label>
+                    
+                   </div>
+                   <!-- manual navigation end -->
+           </div>
+
+           <!--//////////////////////////////////     Slide Image   html  End        /////////////////////////////////////-->
+
+<div id="orderbook">
+    <div id="offer1">
+        <div id="upr">
+            <div id="flat">FLAT 15% OFF  </div>
+         <P>Order Medicines</P>
+        </div>
+        <div id="lwr">
+            <button id="order1">Order Now</button>
+        </div>
+        <div id="styleimg"><img class="styleimg" src="https://assets.pharmeasy.in/web-assets/dist/7c645a8d.png?dim=186x0&dpr=1&q=100" alt=""></div>
+    </div>
+   
+    <div id="offer2">
+        <div id="upr">
+            <div id="flat">UPTO 60% OFF</div>
+            <P>Healthcare Products</P>
+        </div>
+        <div id="lwr">
+            <button id="order2">Order Now</button>
+        </div>
+        <div id="styleimg"><img class="styleimg" src="https://assets.pharmeasy.in/web-assets/dist/c7c7095b.png?dim=186x0&dpr=1&q=100" alt=""></div>
+    </div>
+  
+    <div id="offer3">
+        <div id="upr">
+            <div id="flat">UPTO 70% OFF</div>
+            <P>Lab Tests</P>
+            <div id="new">NEW</div>
+        </div>
+        <div id="lwr">
+            <button id="order3">Book Now</button>
+            <div id="styleimg"><img class="styleimg" src="https://assets.pharmeasy.in/web-assets/dist/e1d3ac1c.png?dim=186x0&dpr=1&q=100" alt=""></div>
+        </div>
+    </div>    
+    </div>
+
+
+<!-- //////////////////////////////// /////////                             /////////////////////////////// -->
+
+<div id="saveband">
+
+    <div id="llog"><img class="llog" src="https://assets.pharmeasy.in/web-assets/dist/e3db129c.png" alt=""></div>
+    <div id="savedetail">Save flat 5% extra on medicines & enjoy FREE delivery with PLUS membership</div>
+    <div id="rlog"><img class="rlog" src="https://assets.pharmeasy.in/web-assets/dist/b20b0932.png" alt=""></div>
+</div>
+ <!-- //////////////////////////////////////                                   /////////////////////////////// -->
+
+<div id="offersdiv">
+    <div id="circlelogo">
+        <img class="circlelogo" src="https://assets.pharmeasy.in/web-assets/dist/67890676.svg" alt=""><a class="spn">Offers Just For You </a> 
+    </div>
+    <div id="seeall">See All Offers  &nbsp; &nbsp; &nbsp; <button id="leftarrow">&#8592;</button> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="rightarrow">	&#8594;</button></div>
+</div>
+
+<!-- ////////////////////////////////////                                      /////////////////////////////// -->
+
+<div id="multipleoffer">
+    <div id="firstoff">
+        <div id="leftoff"><img class="leftoff" src="https://cms-contents.pharmeasy.in/offer/99a287decc6-FLAT_30OFF.jpg?dim=60x0&dpr=1&q=100" alt=""></div>
+        <div id="rightoff">
+            <div>   Flat 30% off + FREE Plus membership</div>
+            <div>Code:<b> GRAND30</b></div>
+        </div>
+    </div>
+    <div id="firstoff">
+         <div id="leftoff"><img class="leftoff" src="https://cms-contents.pharmeasy.in/offer/81308cc59b5-FLAT_20.jpg?dim=60x0&dpr=1&q=100" alt=""></div>
+        <div id="rightoff">
+            <div>   Flat 20% off + FREE Plus membership</div>
+            <div>Code:<b> MEGA20</b></div>
+        </div>
+    </div>
+    <div id="firstoff">
+         <div id="leftoff"><img class="leftoff" src="https://cms-contents.pharmeasy.in/offer/2846076d5d2-Diagnostics-10-min.png?dim=60x0&dpr=1&q=100" alt=""></div>
+        <div id="rightoff">
+            <div>   Flat 40% off + FREE Plus membership</div>
+            <div>Code:<b> CARE4U</b></div>
+        </div>
+    </div>
+    <div id="firstoff">
+         <div id="leftoff"><img class="leftoff" src="https://cms-contents.pharmeasy.in/offer/16080f30d6a-1.jpg?dim=60x0&dpr=1&q=100" alt=""></div>
+        <div id="rightoff">
+            <div>   Flat 30% off + FREE Plus membership</div>
+            <div>Code:<b> PBYJUS23</b></div>
+        </div>
+    </div>
+    <div id="firstoff">
+         <div id="leftoff"><img class="leftoff" src="https://cms-contents.pharmeasy.in/offer/bb20b7c6548-2.jpg?dim=60x0&dpr=1&q=100" alt=""></div>
+        <div id="rightoff">
+            <div>   Flat 30% off + FREE Plus membership</div>
+            <div>Code:<b> PABUS23</b></div>
+        </div>
+    </div>
+    <div id="firstoff">
+         <div id="leftoff"><img class="leftoff" src="https://cms-contents.pharmeasy.in/offer/b964e016470-Diagnostics-09-min.png?dim=60x0&dpr=1&q=100" alt=""></div>
+        <div id="rightoff">
+            <div>   Flat 30% off + FREE Plus membership</div>
+            <div>Code:<b> CSH600</b></div>
+        </div>
+    </div>
+    <div id="firstoff">
+         <div id="leftoff"><img class="leftoff" src="https://cms-contents.pharmeasy.in/offer/99a287decc6-FLAT_30OFF.jpg?dim=60x0&dpr=1&q=100" alt=""></div>
+        <div id="rightoff">
+            <div>   Flat 30% off + FREE Plus membership</div>
+            <div>Code:<b> GRAND30</b></div>
+        </div>
+    </div>
+    <div id="firstoff">
+         <div id="leftoff"><img class="leftoff" src="https://cms-contents.pharmeasy.in/offer/99a287decc6-FLAT_30OFF.jpg?dim=60x0&dpr=1&q=100" alt=""></div>
+        <div id="rightoff">
+            <div>   Flat 30% off + FREE Plus membership</div>
+            <div>Code:<b> GRAND30</b></div>
+        </div>
+    </div>
+    <div id="firstoff">
+         <div id="leftoff"><img class="leftoff" src="https://cms-contents.pharmeasy.in/offer/99a287decc6-FLAT_30OFF.jpg?dim=60x0&dpr=1&q=100" alt=""></div>
+        <div id="rightoff">
+            <div>   Flat 30% off + FREE Plus membership</div>
+            <div>Code:<b> GRAND30</b></div>
+        </div>
+    </div>
+</div>
+<!-- /////////////////////////                             ///////////////////////////////// -->
+
+
+<div id="countdiv">
+    <div id="circlelogos">
+        <img class="circlelogos" src="https://assets.pharmeasy.in/web-assets/dist/cc9b301d.svg" alt="">
+        <a class="spns"><b>Deals of the Day &nbsp;  &nbsp;  &nbsp;|</b>
+            <div id="countdown"><b>00:00:00</b></div>
+         </a> 
+    </div>
+    <div id="seealls">See All Offers  &nbsp; &nbsp; &nbsp;
+         <button id="leftarrows">&#8592;</button>
+          &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="rightarrows">	&#8594;</button>
+        </div>
+</div>
+<div id="off50">
+    <div id="box50">
+        <div id="boximg">
+            <div id="offpercent">50% OFF</div>
+            <div id="offimg"><img class="offimg" src="https://cdn01.pharmeasy.in/dam/products_otc/O87871/baidyanath-ashok-ghrita-100-gm-2-1641788981.jpg?dim=224x0&dpr=1&q=100" alt=""></div>
+        </div>
+        <p id="ttl">Baidyanath Ashok Ghrita-100 Gm</p>
+        <div id="mrp">MRP 249</div>
+        <div id="rate">	&#8377; 124.5</div>
+    </div>
+
+    <div id="box50">
+        <div id="boximg">
+            <div id="offpercent">24% OFF</div>
+            <div id="offimg"><img class="offimg" src="https://cdn01.pharmeasy.in/dam/products_otc/D95288/onetouch-select-plus-simple-glucometer-with-10-free-strips-2-1645456739.jpg?dim=224x0&dpr=1&q=100" alt=""></div>
+        </div>
+        <p id="ttl">Baidyanath Ashok Ghrita-100 Gm</p>
+        <div id="mrp">MRP 249</div>
+        <div id="rate">	&#8377; 124.5</div>
+    </div>
+
+    <div id="box50">
+        <div id="boximg">
+            <div id="offpercent">47% OFF</div>
+            <div id="offimg"><img class="offimg" src="https://cdn01.pharmeasy.in/dam/products_otc/D62974/upakarma-shilajit-extracts-100-natural-pure-shilajeet-for-men-90-capsules-2-1650959145.jpg?dim=224x0&dpr=1&q=100" alt=""></div>
+        </div>
+        <p id="ttl">Baidyanath Ashok Ghrita-100 Gm</p>
+        <div id="mrp">MRP 249</div>
+        <div id="rate">	&#8377; 124.5</div>
+    </div>
+
+    <div id="box50">
+        <div id="boximg">
+            <div id="offpercent">50% OFF</div>
+            <div id="offimg"><img class="offimg" src="https://cdn01.pharmeasy.in/dam/products_otc/H56716/plum-grape-seed-sea-buckthorn-light-stay-day-cream-spf-30-pa-60-ml-2-1649767642.jpg?dim=224x0&dpr=1&q=100" alt=""></div>
+        </div>
+        <p id="ttl">Baidyanath Ashok Ghrita-100 Gm</p>
+        <div id="mrp">MRP 249</div>
+        <div id="rate">	&#8377; 124.5</div>
+    </div>
+
+    <div id="box50">
+        <div id="boximg">
+            <div id="offpercent">45% OFF</div>
+            <div id="offimg"><img class="offimg" src="https://cdn01.pharmeasy.in/dam/products_otc/G67452/pharmeasy-calcium-magnesium-zinc-vitamin-d3-pack-of-60-2-1643876301.jpg?dim=224x0&dpr=1&q=100" alt=""></div>
+        </div>
+        <p id="ttl">Baidyanath Ashok Ghrita-100 Gm</p>
+        <div id="mrp">MRP 249</div>
+        <div id="rate">	&#8377; 124.5</div>
+    </div>
+
+</div>
+
+
+<!-- ////////////////////////////////////////     Footer           ///////////////////////////////////////////// -->
+<div id="milionbox">
+<div id="million">
+    <div id="starimg"><img src="https://assets.pharmeasy.in/web-assets/dist/4d2f7c48.svg" alt=""></div>
+    <div id="mill"><h1>25 Million</h1></div>
+    <div id="det">Registered Users as of Jun 30,2021</div>
+</div>
+<div id="million">
+    <div id="starimg"><img src="https://assets.pharmeasy.in/web-assets/dist/92c372bb.svg" alt=""></div>
+    <div id="mill"><h1>8.8 Million</h1></div>
+    <div id="det">PharmEasy Orders as of FY21</div>
+</div>
+<div id="million">
+    <div id="starimg"><img src="https://assets.pharmeasy.in/web-assets/dist/773ae9c5.svg" alt=""></div>
+    <div id="mill"><h1>50K+</h1></div>
+    <div id="det">SKUs sold in Q1FY22</div>
+</div>
+<div id="million">
+    <div id="starimg"><img src="https://assets.pharmeasy.in/web-assets/dist/f2d557d3.svg" alt=""></div>
+    <div id="mill"><h1>18K+</h1></div>
+    <div id="det">Pin-Codes Serviced for the month of June 2021</div>
+</div>
+</div>
+
+<div id="simplify">
+    <div id="simleft">
+        <h1>Simplifying Healthcare, Impacting Lives</h1>
+        <h2>Download the App for free</h2>
+        <a href=""><img class="android" src="https://assets.pharmeasy.in/web-assets/dist/4e4f1cab.png" alt=""></a>
+        <a href=""><img class="apple" src="https://assets.pharmeasy.in/web-assets/dist/83095c03.png" alt=""></a>
+    </div>
+    <div id="simright"><img class="simright" src="https://assets.pharmeasy.in/web-assets/dist/1d1ccea7.jpg" alt=""></div>
+</div>
+
+
+
+<!--  ////////////////////////////////////// Footer copy      ///////////////////////////////////////// -->
+<div id="bot3">
+    <div id="b3first">
+      <div id="feat">
+        <div>
+          <h4>Company</h4>
+          <p>Careers</p>
+          <p>Blogs</p>
+          <p>Partner with PharmEasy</p>
+          <h4>Our Services</h4>
+          <p>Order Medicine</p>
+          <p>Healthcare Products</p>
+          <p>Diagnostic Tests</p>
+        </div>
+        <div>
+          <h4>Featured Categories</h4>
+          <p>Covid Essentials</p>
+          <p>Devices</p>
+          <p>Nutriyion and Fitness Suppliments</p>
+          <p>Personal Care</p>
+          <p>Ayurvedic Care</p>
+          <p>Baby and Mom care</p>
+          <p>Skin Care</p>
+          <p>Diabetic Care</p>
+          <p>Sexual Wellness</p>
+          <p>Short term Ailments</p>
+          <p>Lifestyle Ailments</p>
+          <p>Home Care</p>
+          <p>Women Care</p>
+          <p>Health Food and Drinks</p>
+          <p>Ortho Care</p>
+        </div>
+        <div>
+          <h4>Need Help</h4>
+          <p>Browse All Medicines</p>
+          <p>Browse All Molecules</p>
+          <p>FAQs</p>
+          <h4>Policy Info</h4>
+          <p>Editorial Policy</p>
+          <p>Privacy Policy</p>
+          <p>Vulnerability Disclosure Policy</p>
+          <p>Terms and condition</p>
+          <p>Customer Support Policy</p>
+          <p>Return Policy</p>
+        </div>
+      </div>
+      <div id="social">
+        <h4>FOLLOW US</h4>
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/2111/2111463.png"
+          alt="insta"
+        />
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/174/174848.png"
+          alt="fb"
+        />
+        <!-- <img
+          src="https://cdn-icons.flaticon.com/png/128/3128/premium/3128307.png?token=exp=1655291469~hmac=d5c9d1ca4d550163ff7bf080fb48d6c1"
+          alt="YT"
+        />
+        <img
+          src="https://cdn-icons.flaticon.com/png/128/3670/premium/3670127.png?token=exp=1655291433~hmac=bea43795d5afe63df2c2038d2ea48cde"
+          alt="twit"
+        /> -->
+        
+      </div>
+    </div>
+    <div id="b3sec">
+      <div id="pay">
+        <h4>Our Payment Partners</h4>
+        <span
+          ><img
+            src="https://assets.pharmeasy.in/web-assets/dist/af0c6812.svg"
+            alt=""
+        /></span>
+        <span
+          ><img
+            src="https://assets.pharmeasy.in/web-assets/dist/0e010044.svg"
+            alt=""
+        /></span>
+        <span
+          ><img
+            src="https://assets.pharmeasy.in/web-assets/dist/1066bb1f.svg"
+            alt=""
+        /></span>
+        <span
+          ><img
+            src="https://assets.pharmeasy.in/web-assets/dist/fbea1701.svg"
+            alt="" /></span
+        ><span
+          ><img
+            src="https://assets.pharmeasy.in/web-assets/dist/3a1a533d.svg"
+            alt="" /></span
+        ><span
+          ><img
+            src="https://assets.pharmeasy.in/web-assets/dist/4733a49d.svg"
+            alt="" /></span
+        ><span
+          ><img
+            src="https://assets.pharmeasy.in/web-assets/dist/b278e536.svg"
+            alt="" /></span
+        ><span
+          ><img
+            src="https://assets.pharmeasy.in/web-assets/dist/0aca2077.svg"
+            alt="" /></span
+        ><span
+          ><img
+            src="https://assets.pharmeasy.in/web-assets/dist/44a51ca5.svg"
+            alt="" /></span
+        ><span
+          ><img
+            src="https://assets.pharmeasy.in/web-assets/dist/d058b00d.svg"
+            alt="" /></span
+        ><span
+          ><img
+            src="https://assets.pharmeasy.in/web-assets/dist/e9445364.svg"
+            alt="" /></span
+        ><span
+          ><img
+            src="https://assets.pharmeasy.in/web-assets/dist/6e09c713.svg"
+            alt=""
+        /></span>
+      </div>
+      <div id="copy">© 2021 PharmEasy. All Rights Reserved</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- //////////////////////     Debouncing Start      ///////////////////////// -->
+<div id="debounce"></div>
+
+<div id="login_page">
+    <div>
+        <nav>
+            <img src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png" alt="pharmeasy">
+            <i class="fa-solid fa-xmark" id="cross"></i>
+        </nav>
+        <div>
+            <p>Quick Login / Register</p>
+            <form>
+               <input type="text" placeholder="Enter your phone number" required>
+            </form>
+            <button id="otpbtn">Continue</button>
+            <p>By clicking continue, you agree with our turms and condition<a href="#"> Privacy Policy </a></p>
+        </div>
+        <div id="otp">
+        <!-- append otp here -->
+        </div>
+    </div>
+</div>
+    </body>
+</html>
+
+
+
+
+<script type="module">
+        import navbar from './component/navbar.js'
+        import {getData} from "./cbscripts/index.js";
+
+document.querySelector("#navbar").innerHTML=navbar();
+
+       
+        document.querySelector(".searchicon").addEventListener("click",function(){
+            var query = document.querySelector("#searchbar").value;
+            console.log(query);
+            localStorage.setItem("search",JSON.stringify(query));
+           
+            getData();
+          
+            window.location.href="searchproduct.html";
+
+        });
+        
+    </script>
+<script type="module" src="./cbscripts/home.js"></script>
+
+
+   
+<script src="https://kit.fontawesome.com/f36b7b286b.js" crossorigin="anonymous"></script>

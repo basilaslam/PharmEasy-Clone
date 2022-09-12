@@ -1,0 +1,48 @@
+function navbar(){
+    return `
+    <div id="navtop">
+    <div id="mainlogo">
+      <a href="./index.html">  <img class="mainlogo" src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png" alt="1"></a>
+    </div>
+    <div id="bar">
+        <select name="" id="select">
+            <option value="">Select Pincode</option>
+            <input id="searchbar" type="Search" placeholder="|   Search medicines/Healthcare products">
+            <div class="searchicon">
+            <img src='https://img.icons8.com/material-outlined/344/search--v1.png' style="background-color:teal, border:0px solid transparent "id="searchicon" alt="">
+            </div>
+                  
+        </select>
+    </div>
+
+</div>
+<div id="navbottom">
+    <div id="left">
+     <div id="or"><a href='../orderPage.html'>Order Medicines</a></div>
+        <div><a href='../healthProducts.html'> Healthcare Products</a></div>
+        <div><a href='../labTest.html'>Lab Tests</a></div>
+        <div><a href='../rtpcr.html'>RTPCR</a></div>
+    </div>
+    <div id="right">
+        <div>
+        <img src="https://assets.pharmeasy.in/web-assets/dist/275c07e1.svg" alt="">
+            <div class="center"><a href='offers.html'>Offers</a></div>
+            </div>
+        
+        <div>
+        <img src="https://assets.pharmeasy.in/web-assets/dist/5eb42971.svg" alt="">
+            <div class="center" id="login"><a href='#'>Signup / Login</a></div>
+        </div>
+        <div>
+        <img src="https://assets.pharmeasy.in/web-assets/dist/21b0b5ba.svg" alt="">
+            <div class="center">
+            <a href='../addToCart/addToCart.html'>Cart</a>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+    `
+}
+export default navbar; 

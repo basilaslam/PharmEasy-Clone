@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Cart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../Basil style/navbar.css">
+    <style>
+       
+        /* -----------------------------CART DIV SECTION ------------------------------ */
+
+        #cartMainContainer>h3 {
+            margin-left: 150px;
+            font-size: 26px;
+            font-family: sans-serif;
+            font-weight: 540;
+            color: #4a4a4a;
+        }
+
+        #cartCards {
+            /* border: 2px solid green;    */
+            /* width: 45%; */
+            width: 600px;
+            margin-top: 30px;
+            margin-left: 150px;
+        }
+
+        #outer {
+            display: flex;
+            border: 0.1px solid #6a6767;
+            border-width: 0.1px;
+            margin-bottom: 20px;
+        }
+
+        #cartCol1 {
+            margin-left: 15px;
+            margin-right: 25px;
+            margin-top: 20px;
+        }
+
+        #cartCol2 {
+            width: 100%;
+            margin-top: 12px;
+        }
+
+        #productLogoImg {
+            height: 40px;
+            width: 40px;
+        }
+
+        #productNameDiv {
+            display: flex;
+            /* align-items: flex-end; */
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        #productName {
+            font-family: sans-serif;
+            color: #4a4a4a;
+            font-weight: 530;
+            font-size: 18px;
+        }
+
+        #deliveryDate {
+            font-family: sans-serif;
+            color: #4a4a4a;
+            font-weight: 530;
+            font-size: 18px;
+        }
+
+        #cartPrice {
+            font-family: sans-serif;
+            color: #4a4a4a;
+            font-weight: 550;
+            font-size: 16px;
+        }
+
+
+
+        /* -----------------------------APP BENEFITS SECTION ------------------------------ */
+        #appBenefits {
+            display: flex;
+            width: 70%;
+            margin: auto;
+            margin-top: 60px;
+
+
+        }
+
+        .appBenefitsCard,
+        #appBenefitsCard>h4 {
+            width: 200px;
+            padding-left: 30px;
+            margin-left: 40px;
+            text-align: center;
+            font-weight: 300;
+            color: #4f585e;
+            font-family: sans-serif;
+            margin-bottom: 20px;
+        }
+
+        #downloadAppSection {
+            display: flex;
+            margin-left: 300px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        #appLinks {
+            margin-left: 100px;
+            width: 600px;
+            margin-top: 30px;
+            /* border: 1px solid red; */
+        }
+
+        #appLinks>h2 {
+            margin-left: 18px;
+            font-family: sans-serif;
+            font-weight: 300;
+            color: #4f585e;
+        }
+
+        #app-store-container {
+            display: flex;
+            margin-top: 40px;
+        }
+
+        .AppStoreDiv {
+            display: flex;
+            width: 180px;
+            align-items: center;
+            height: 56px;
+            border-radius: 10px;
+            /* margin-left: 30px; */
+            margin-left: 15px;
+            background-color: #4a4a4a;
+            /* border: 1px solid green; */
+            padding-left: 20px;
+        }
+
+        .AppStoreDiv>p {
+            margin-left: 15px;
+            font-family: sans-serif;
+            color: white;
+        }
+
+        /*----------------------- FOOTER SECTION -----------------------*/
+        #healthcare-footer {
+            background-color: rgb(243, 255, 255);
+            font-family: sans-serif;
+            font-size: 16px;
+            font-weight: 250;
+            height: 650px;
+            display: flex;
+            /* width: 80%; */
+            margin: auto;
+        }
+
+        .footerColumns {
+            margin-left: 120px;
+        }
+
+        #socialIconsContainer {
+            display: flex;
+        }
+
+        .socialIcons {
+            width: 30px;
+            height: 30px;
+            margin-left: 20px;
+        }
+
+        /*------------------------ Footer: Payment Partners Section --------------------*/
+
+        #paymentPartnerSection {
+            background-color: rgb(243, 255, 255);
+            height: 150px;
+        }
+
+        #paymentPartners {
+            display: flex;
+            margin-left: 80px;
+        }
+
+        #paymentPartnersHeader {
+            margin-left: 100px;
+            font-family: sans-serif;
+            font-weight: 400;
+            margin-top: 0;
+            color: #4a4a4a;
+            font-weight: 600;
+        }
+
+        .paymentPartnerLogo {
+            height: 48px;
+            width: 48px;
+            padding-left: 20px;
+            margin-top: 15px;
+        }
+
+        #paymentPartners h3 {
+            margin-left: 50px;
+            font-family: sans-serif;
+            font-weight: 400;
+            color: #4a4a4a;
+
+        }
+    </style>
+    <link rel="stylesheet" href="addToCart.css">    
+</head>
+
+<body>
+    <!--------------------------------------HTML NAVBAR HTML CODE START---------------------------------------->
+
+    <body>
+        <div id="navbar">
+
+        </div>
+        <!--------------------------------------HTML NAVBAR HTML CODE ENDS---------------------------------------->
+
+        <!----------------------------------- CART CONTAINER SECTION ------------------------------->
+       
+
+
+
+
+
+
+        <div id="cartMainContainer">
+            <h3> <span id="Number"> <!--Apppnd product Number here--> </span> Items In Cart</h3>
+            <div id="big_con">
+                <div id="cartCards">
+                    <!-- Append data here -->
+                </div>
+                <div>
+                    <!-- coupan and dilivery Section -->
+                    <!-- <h1>coupan section  </h1> -->
+                    <button style="font-size: large; margin: auto; display: flex; justify-content: space-between; width: 100%; height:50px; padding: 15px; box-sizing: border-box; background-color: white; color:teal; border-radius: 10px; border-color: gray;">
+                        <div style="display: flex; justify-content: center; width: 200px;">
+                            <img style="height:20px; width: 20px; margin-top: -03px; margin-right: 12px;" src="https://assets.pharmeasy.in/web-assets/dist/90a09c2f.svg" alt="">
+                            <span style=" margin-top: -3px;">Apply Coupon</span>
+                        </div>
+                        <div>></div>
+                    </button>
+                    <div>
+                        <a href="payment.html"> <button style="background-color: teal; color: white; width: 100%; height: 50px; border-radius: 10px; cursor: pointer; border-color: gray; margin:10px 0px; font-size: larger;box-sizing: border-box; ">  Proceed To Buy </button> </a>
+                    </div>
+                    <p style="border: 1px dashed green;border-radius: 10px; padding: 5px; ">
+                        <img style="height:20px; width: 20px; " src="https://cdn.pharmeasy.in/cms/delivery_image.png" alt="">
+                         Free delivery with cart value above ₹500 
+                    </p>
+                    <div >
+                        <h2>Order Summary</h2>
+                        <div style="height:100%; display: flex; justify-content: space-between;">
+                            <span>Cart value</span>
+                            <!-- Append cart value -->
+                             <span id="payment"></span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <!-- <span>Delivery Charge</span> -->
+                            <!-- <span> <s>₹30.00</s> </span> -->
+                        </div>
+                        <hr>
+                        <div style="display:flex; justify-content: space-between;">
+                            <h3>Amount to be paid</h3>
+                            <!-- Apend total Amount here -->
+                            <h4 id="payment1"></h4>
+                        </div>
+                    </div>
+                    <div>
+                        <!-- <img src="" alt=""> -->
+                    </div>
+                    <div>
+                        <!-- <h3>Total saving of <span style="font-weight:800;">₹221.05</span> on this order</h3> -->
+                        <div>
+                            <!-- <p>MRP discount 12%</p> -->
+                            <!-- Total discount price -->
+                            <!-- <h4>₹</h4> -->
+                        </div>
+                    </div>
+                    <img style="height: 200px; width: 100%;" src="./image/Screenshot (1185).png" alt="">
+                    <div style="display: flex; background-color: rgb(175, 229, 237); padding: 5px;">
+                       <div> <img style="height: 30px; width: 30px;" src="https://assets.pharmeasy.in/web-assets/dist/0c22e009.svg?dim=0x32&dpr=1&q=100" alt=""> </div>
+                       <p>Products will be safely packed & Sanitized.</p>
+                    </div>
+                    <div>
+
+                    </div>
+                
+                </div>
+            </div>
+            <hr>
+
+            <!-- Other -->
+            
+            <!-- <div id="recentBoughtCart">
+                <h3>
+                    Customers who bought above items also bought
+                </h3>
+            </div>
+            <div id="additionalNotes">
+                <h2>
+                    Additional Notes
+                </h2>
+                <input id="additionalNotesInput" type="text"
+                    placeholder="Enter any additional information regarding your order">
+                <ul>
+                    <li>
+                        A licensed pharmacy would be delivering your order basis availability of product & fastest
+                        delivery.
+                    </li>
+                    <li>
+                        Prices are indicative and may change after billing
+                    </li>
+                    <li>
+                        PharmEasy is a technology platform to connect sellers and buyers and is not involved in sales of
+                        any product. Offer for sale on the products and services are provided/sold by the sellers only.
+                        For detail read Terms and Conditions
+
+                    </li>
+                </ul>
+            </div> -->
+        </div>
+
+
+        <!----------------------------------------APP BENEFITS-------------------------------------->
+        <div id="appBenefits">
+            <div class="appBenefitsCard">
+                <img src="https://pharmeasy.in/_next/image?url=%2Ficons%2FgenuineMedicine.svg&w=64&q=75">
+                <h4>
+                    1 Lakh+ Products
+                </h4>
+                <p>
+                    We maintain strict quality controls on all our partner retailers, so that you always get standard
+                    quality products.
+                </p>
+            </div>
+            <div class="appBenefitsCard">
+                <img src="https://pharmeasy.in/_next/image?url=%2Ficons%2FsecurePayment.svg&w=64&q=75">
+                <h4>
+                    Secure Payment
+                </h4>
+                <p>
+                    100% secure and trusted payment protection
+                </p>
+            </div>
+            <div class="appBenefitsCard">
+                <img src="https://pharmeasy.in/_next/image?url=%2Ficons%2FeasyReturn.svg&w=64&q=75">
+                <h4>
+                    Easy Return
+                </h4>
+                <p>
+                    We have a new and dynamic return window policy for medicines and healthcare items. Refer FAQs
+                    section for more details.
+
+                </p>
+            </div>
+        </div>
+        <hr>
+        <!----------------------------------------DOWNLOAD APP SECTION -------------------------------------->
+        <div id="downloadAppSection">
+            <div>
+                <img src="https://pharmeasy.in/_next/image?url=%2Ficons%2FfooterMobile.jpg&w=256&q=75">
+            </div>
+            <div id="appLinks">
+                <h2>
+                    Download the App for Free
+                </h2>
+                <div id="app-store-container">
+                    <div class="AppStoreDiv">
+                        <img class="appStoreImg"
+                            src="https://pharmeasy.in/_next/image?url=%2Ficons%2FplayStore.png&w=32&q=75">
+                        <p>
+                            Google Play
+                        </p>
+                    </div>
+                    <div class="AppStoreDiv">
+                        <img class="appStoreImg"
+                            src="https://pharmeasy.in/_next/image?url=%2Ficons%2FappStore.png&w=32&q=75">
+                        <p>
+                            App Store
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <!----------------------------FOOTER SECTION START ------------------------------>
+        <div id="healthcare-footer">
+            <!-- COLUMN 1 -->
+            <div class="footerColumns">
+                <h4>
+                    Our Company
+                </h4>
+                <p>
+                    About Us
+                </p>
+                <p>
+                    Careers
+                </p>
+                <p>
+                    Blog
+                </p>
+                <p>
+                    Partner with PharmEasy
+                </p>
+                <h4>
+                    Our Services
+                </h4>
+                <p>
+                    Order Medicine
+                </p>
+                <p>
+                    Healthcare Products
+                </p>
+                <p>
+                    Lab Tests
+                </p>
+            </div>
+            <!-- COLUMN 2 -->
+            <div class="footerColumns">
+                <h4>
+                    Featured Categories
+                </h4>
+                <p>
+                    Covid Essentials
+                </p>
+                <p>
+                    Personal Care
+                </p>
+                <p>
+                    Health Food and Drinks
+                </p>
+                <p>
+                    Skin Care
+                </p>
+                <p>
+                    Home Care
+                </p>
+                <p>
+                    Ayurvedic Care
+                </p>
+                <p>
+                    Sexual Wellness
+                </p>
+                <p>
+                    Fitness & Supplements
+                </p>
+                <p>
+                    Mother & Baby Care
+                </p>
+                <p>
+                    Healthcare Devices
+                </p>
+                <p>
+                    Surgicals & Dressings
+                </p>
+                <p>
+                    Diabetic Care
+                </p>
+                <p>
+                    Elderly Care
+                </p>
+                <p>
+                    Accessories & Wearables
+                </p>
+                <p>
+                    Beauty
+                </p>
+            </div>
+            <!-- COLUMN 3 -->
+            <div class="footerColumns">
+                <h4>
+                    Need Help
+                </h4>
+                <p>
+                    Browse All Medicines
+                </p>
+                <p>
+                    Browse All Molecules
+                </p>
+                <p>
+                    Browse All Cities & Areas
+                </p>
+                <p>
+                    FAQs
+                </p>
+                <h4>
+                    Policy Info
+                </h4>
+                <p>
+                    Editorial Policy
+                </p>
+                <p>
+                    Privacy Policy
+                </p>
+                <p>
+                    Vulnerability Disclosure Policy
+                </p>
+                <p>
+                    Terms and condition
+                </p>
+                <p>
+                    Customer Support Policy
+                </p>
+                <p>
+                    Return Policy
+                </p>
+            </div>
+            <!-- COLUMN 4 -->
+            <div class="footerColumns">
+                <h4>
+                    FOLLOW US
+                </h4>
+                <div id="socialIconsContainer">
+                    <img class="socialIcons" src="https://img.icons8.com/ios/344/instagram-new--v1.png">
+                    <img class="socialIcons" src="https://img.icons8.com/ios/344/facebook-new.png">
+                    <img class="socialIcons" src="https://img.icons8.com/ios/344/youtube-play--v1.png">
+                    <img class="socialIcons" src="https://img.icons8.com/ios/344/twitter--v1.png">
+                </div>
+            </div>
+        </div>
+        <!------------------------ FOOTER: PAYMENT PARTNERS SECTION ---------------------->
+        <div id="paymentPartnerSection">
+            <div>
+                <h3 id="paymentPartnersHeader">
+                    Our Payment Partners
+                </h3>
+                <div id="paymentPartners">
+                    <img class="paymentPartnerLogo" src="https://assets.pharmeasy.in/web-assets/dist/af0c6812.svg">
+                    <img class="paymentPartnerLogo" src="https://assets.pharmeasy.in/web-assets/dist/0e010044.svg">
+                    <img class="paymentPartnerLogo" src="https://assets.pharmeasy.in/web-assets/dist/1066bb1f.svg">
+                    <img class="paymentPartnerLogo" src="https://assets.pharmeasy.in/web-assets/dist/3a1a533d.svg">
+                    <img class="paymentPartnerLogo" src="https://assets.pharmeasy.in/web-assets/dist/fbea1701.svg">
+                    <img class="paymentPartnerLogo" src="https://assets.pharmeasy.in/web-assets/dist/4733a49d.svg">
+                    <img class="paymentPartnerLogo" src="https://assets.pharmeasy.in/web-assets/dist/b278e536.svg">
+                    <img class="paymentPartnerLogo" src="https://assets.pharmeasy.in/web-assets/dist/0aca2077.svg">
+                    <img class="paymentPartnerLogo" src="https://assets.pharmeasy.in/web-assets/dist/44a51ca5.svg">
+                    <img class="paymentPartnerLogo" src="https://assets.pharmeasy.in/web-assets/dist/d058b00d.svg">
+                    <img class="paymentPartnerLogo" src="https://assets.pharmeasy.in/web-assets/dist/e9445364.svg">
+                    <h3>© 2022 PharmEasy. All Rights Reserved</h3>
+                </div>
+            </div>
+        </div>
+
+
+        <!----------------------------FOOTER SECTION ENDS ------------------------------>
+
+
+
+
+    </body>
+
+</html>
+<script type="module" src="./addToCart.js"></script>

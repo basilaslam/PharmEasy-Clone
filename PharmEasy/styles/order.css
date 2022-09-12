@@ -1,3 +1,6 @@
+body{
+    margin: 0;
+}
 * {
     font-family: Open Sans, sans-serif !important;
 }
@@ -6,10 +9,17 @@
     color: rgb(43, 49, 40);
 }
 
+
+#navbottom #left > :nth-child(1){
+    padding-bottom: 5px;
+    border-bottom: 5px solid white;
+}
+
+
 .top_bar {
     display: flex;
     margin-left: 250px;
-    margin-top: 20px;
+    margin-top: 150px;
     margin-bottom: 40px;
     text-align: center;
     align-items: center;
@@ -118,6 +128,14 @@ p {
     border: none;
     font-size: 15px;
 }
+ div.cart_box3 > div:nth-child(5){
+    width: 60px;
+    background-color: #dee7e7;
+ }
+ div.cart_box3 > div:nth-child(5) > img{
+    background-color: #dee7e7;
+    margin-left: 10px;
+ }
 input[type="text" i] {
     padding: 1px 2px;
 }
@@ -180,87 +198,7 @@ a:-webkit-any-link {
 #navbar{
     background-color: teal;
 }
-#navtop{
-    display:flex;
-}
-.mainlogo{
-    width:200px;
-    height:50px;
-    margin-top: 10px;
-}
-#bar{
-    display:flex;
-    background-color: white;
-    width:800px;
-    height:50px;
-    margin-top: 10px;
-    margin-left: 50px;
-    border-radius: 10px;
-}
-#searchicon{
-    width:30px;
-    height:25px;
-    background-color: rgb(222, 231, 231);
-margin-top: 10px;
-}
-#select{
-    width:170px;
-    font-size: larger;
-    border:1px solid white;
-  border-radius: 10px;
-  color: teal;
-}
-#searchbar{
-  border:1px solid white;
-    width:600px;
-    font-size: larger;
-}
-.searchicon{
-   background-color: rgb(241, 241, 241);
-    width:50px;
-    text-align: center;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-#navbottom{
-    display:flex;
-     margin-top: 2px; 
-    
-    width:1090px;
-    height:40px;
-    margin-left: 220px;
-    justify-content: space-between;
-    padding-top: 5px;
-}
-#left{
-    display:flex;
-    color:white;
-    font-size: larger;
-    font-family:'Times New Roman', Times, serif;
 
-    width:520px;
-    justify-content: space-between;
-}
-#right{
-    display:flex;
-    color:white;
-    font-size: larger;
-   
-    width:380px;
-    justify-content: space-between;
-  
-    
-}
- 
-
-
-.center{
-   
-   margin-top: -22px;
-    margin-left: 30px;
-   
-
-}
 .flickity-enabled.is-draggable {
     -webkit-tap-highlight-color: transparent;
     -webkit-user-select: none;

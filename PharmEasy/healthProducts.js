@@ -1,3 +1,9 @@
+import navbar from './component/navbar.js'
+
+
+// Appending Navbar
+document.getElementById('navbar').innerHTML = navbar()
+
 var slideIndex = 1;
 
 var myTimer;
@@ -67,30 +73,3 @@ resume = () =>{
   clearInterval(myTimer);
   myTimer = setInterval(function(){plusSlides(slideIndex)}, 4000);
 }
-
-async function fetchdata(){
-  let data = await fetch('https://rest-api-medicin.herokuapp.com/products')
-  
-  let res = await data.json()
-   console.log(res);
-  }
-  fetchdata()
-
-
-
-
-
-
-
-
-
-
-  
- 
-          
-            
-        
-        
-        
-       
-    

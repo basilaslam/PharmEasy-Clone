@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./component/navbar.css"> -->
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+        }
+        /* nav {
+             border: 1px solid red; 
+            display: flex;
+            justify-content: space-evenly;
+        } */
+
+        /* nav>div {
+            display: flex;
+            width: 40%;
+            display: flex;
+            justify-content: space-evenly;
+        } */
+         #login_page{
+            width: 100%;
+            height: 100vh;
+            display: none;
+            border: 1px solid blue;
+            background-color:#00000011 ;
+            position: absolute;
+            top: 0px;            
+        } 
+        #login_page>div>nav{
+            height: 20%;
+        }
+        #cross{
+            font-size: x-large;
+            margin-right: 5px;
+        }
+        #login_page>div>nav>img{
+            width: 45%;
+            height: 50%;
+            margin: auto ;
+        }
+        #login_page>div{
+            width: 45%;
+            background-color: white;
+            padding:0px 10px;
+            /* margin-left: 60%; */
+            position: absolute;
+            right: 0px;
+            height: 100%;
+        }
+        #login_page>div>nav{
+            background-color: teal;
+            color: white;
+            display: flex;
+        }
+            
+        #login_page>div>div>form>input{
+            height:50px ;
+            width: 98%;
+            padding:0px 0px 0px 10px;
+            margin:30px 0px ;
+            border-radius:10px ;
+            border-color:gray;
+            border-style: double;
+            font-size: larger;
+        }
+        #login_page>div>div{
+            padding: 20px;
+        }
+        #login_page>div>div>p:first-child{
+            margin-top: 10px;
+            font-size: x-large;
+        }
+        input:focus{
+             outline: none; 
+        }
+        #login_page>div>div>button{
+            width: 98%;
+            height: 50px;
+            background-color: teal;
+            color: white;
+            border-radius:10px ;
+            border-color:gray;
+            border-style: double;
+            margin-bottom: 10px;
+            font-size: larger
+        }
+        /* use Media query */
+    </style>
+</head>
+
+<body>
+    <!-- <nav>
+        <div>
+            <h3>Order ME</h3>
+            <h3>Healthcare Product</h3>
+            <h3>Lab Tests</h3>
+            <h3>RTPCR</h3>
+        </div>
+        <div>
+            <h3>Offer</h3>
+            <h3 id="login">Login/ Signup</h3>
+            <h3>cart</h3>
+        </div>
+    </nav> -->
+    
+    <div id="navbar"></div>
+    <div id="login_page">
+        <div>
+            <nav>
+                  <img src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png" alt="pharmeasy">
+                <i class="fa-solid fa-xmark" id="cross"></i>
+            </nav>
+            <div>
+                <p>Quick Login / Register</p>
+                <form>
+                <input type="text" placeholder="Enter your phone number" required>
+                </form>
+                <button>Continue</button>
+                <p>By clicking continue, you agree with our <a href="#"> Privacy Policy </a></p>
+            </div>
+            <div id="otp">
+            <!-- append otp here -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<!-- <script type="module">
+    import navbar from "./component/navbar.js"
+    document.querySelector("#navbar").innerHTML = navbar() ;
+    // This is for login & sign up  cross property
+    let log = document.querySelector("#login");
+    log.style.cursor = "pointer"
+    document.querySelector("#cross").style.cursor = "pointer" ;
+    log.addEventListener("click", loginFun)
+
+    function loginFun() {
+        document.querySelector("#login_page").style.display = "flex";
+        document.querySelector("body").addEventListener("click",function(){
+            document.querySelector("#navbar").style.display = "fle";
+        })
+    }
+    document.querySelector("#cross").addEventListener("click", function (){
+        document.querySelector("#login_page").style.display = "none"
+    });
+
+    //Genrate otp 
+    document.querySelector("button").addEventListener("click", function (){
+        document.querySelector("#otp").innerHTML = null
+          var digits = '0123456789';
+          let OTP1  ; let OTP2  ;let OTP3  ;let OTP4  ;
+          OTP1 = digits[Math.floor(Math.random() * 10)];
+          OTP2 = digits[Math.floor(Math.random() * 10)];
+          OTP3 = digits[Math.floor(Math.random() * 10)];
+          OTP4 = digits[Math.floor(Math.random() * 10)];
+    
+          let box = document.querySelector("#otp")
+          let in1 = document.createElement("input") ;
+          in1.style.marginRight = "10px" ;
+          in1.style.fontSize = "larger" ;
+
+          let in2 = document.createElement("input") 
+          in2.style.marginRight = "10px"
+          in2.style.fontSize = "larger" ;
+
+          let in3 = document.createElement("input") 
+          in3.style.marginRight = "10px"
+          in3.style.fontSize = "larger" ;
+
+          let in4 = document.createElement("input") 
+          in4.style.marginRight = "10px"
+          in4.style.fontSize = "larger" ;
+
+          box.append(in1,in2, in3,in4)
+          in1.style.height = "50px"
+          in1.style.width = "50px"
+
+          in2.style.height = "50px"
+          in2.style.width = "50px"
+
+          in3.style.height = "50px"
+          in3.style.width = "50px"
+          
+          in4.style.height = "50px"
+          in4.style.width = "50px"
+
+           setTimeout(function (){
+            in1.value = OTP1 ;
+            in2.value = OTP2 ;
+            in3.value = OTP3 ;
+            in4.value = OTP4 ;
+           }, 2000) ;
+
+           setTimeout(function (){
+            alert("Login Successfull") ;
+            window.location.reload() ;
+           }, 3000)
+
+        
+    });
+    
+   
+</script> -->
+<!-- <script src="https://kit.fontawesome.com/f36b7b286b.js" crossorigin="anonymous"></script> -->

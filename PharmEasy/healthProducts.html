@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Basil style/navbar.css">
+    <title>Healthcare Products</title>
+
+    <style>
+
+        body {
+            height: 100%;
+            margin: 0;
+        }
+        #navbottom #left > :nth-child(2){
+    padding-bottom: 5px;
+    border-bottom: 5px solid white;
+}
+
+        /* MIDSECTION  */
+        #mid-section{
+            margin-top: 200px;
+        }
+
+        /* ---------CSS SLIDESHOW CAROUSEL START ------------------*/
+    .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    margin-top: 70px;
+}
+
+.mySlides {
+    display: none;
+  height: 300px;
+  border: solid 1px transparent;
+     
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #222428;
+    font-weight: bold;
+    font-size: 30px;
+    transition: .6s ease;
+    border-radius: 0 3px 3px 0
+}
+
+.next {
+    right: -50px;
+    border-radius: 3px 3px 3px 3px
+}
+
+.prev {
+    left: -50px;
+    border-radius: 3px 3px 3px 3px
+}
+
+.prev:hover,
+.next:hover {
+    color: #f2f2f2;
+    background-color: rgba(0, 0, 0, 0.8)
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding-top: 12px;
+  padding-bottom: 12px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    /* background-color: #222428 */
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color .6s ease
+}
+
+.active,
+.dot:hover {
+    background-color: #717171
+}
+
+/* ------------------------------------CSS SLIDESHOW END-------------------------- */
+
+        #healthcare-carousel {
+            margin: auto;
+            margin-left: 350px;
+            margin-bottom: 30px;
+        }
+
+        .healthcare-product-card {
+            display: flex;
+            border: 1px solid #dfe3e6;
+            width: 370px;
+            height: 75px;
+            justify-content: space-around;
+            padding-top: 25px;
+            border-radius: 5px;
+
+        }
+
+        .healthcare-product-img {
+            height: 60px;
+            width: 60px;
+        }
+
+        .healthcare-product-discount-rate {
+            color: teal;
+        }
+
+        #products-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+            width: 80%;
+            margin: auto;
+        }
+        .healthcare-product-card > h3 {
+            font-size: 16px;
+            font-weight: 500;
+            font-family: sans-serif;
+            color: #4a4a4a;
+        }
+
+        #mid-section {
+            margin-bottom: 30px;
+        }
+
+        #healthcare-bottom-text-section {
+            margin-top: 30px;
+            width: 80%;
+            margin: auto;
+            font-family: sans-serif;
+            font-weight: 300;
+            color: #4f585e;
+            line-height: 1.5;
+            margin-bottom: 40px;
+        }
+
+        #healthcare-bottom-text-section > h2, h3 {
+            font-weight: 540;
+        }
+
+
+        /* -----------------------------APP BENEFITS SECTION ------------------------------ */
+        #appBenefits {
+            display: flex;
+            width: 70%;
+            margin: auto;
+            margin-top: 30px;
+
+        }
+
+        .appBenefitsCard, #appBenefitsCard > h4  {
+            width: 200px;
+            padding-left: 30px;
+            margin-left: 40px;
+            text-align: center;
+            font-weight: 300;
+            color: #4f585e;
+            font-family: sans-serif;
+            margin-bottom: 20px;
+        }
+
+        #downloadAppSection {
+            display: flex;
+            margin-left: 300px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        
+        #appLinks {
+            margin-left: 100px;
+            width: 600px;
+            margin-top: 30px;
+            /* border: 1px solid red; */
+        }
+
+        #appLinks > h2 {
+            margin-left: 18px;
+            font-family: sans-serif;
+            font-weight: 300;
+            color: #4f585e;
+        }
+
+        #app-store-container {
+            display: flex;
+            margin-top: 40px;
+        }
+
+        .AppStoreDiv {
+            display: flex;
+            width: 180px;
+            align-items: center;
+            height: 56px;
+            border-radius: 10px;
+            /* margin-left: 30px; */
+            margin-left: 15px;
+            background-color: #4a4a4a;
+            /* border: 1px solid green; */
+            padding-left: 20px;
+        }
+
+        .AppStoreDiv > p {
+            margin-left: 15px;
+            font-family: sans-serif;
+            color: white;
+        }
+
+        /*----------------------- FOOTER SECTION -----------------------*/
+        #healthcare-footer {
+            background-color: rgb(243, 255, 255);
+            font-family: sans-serif;
+            font-size: 16px;
+            font-weight: 250;
+            height: 650px;
+            display: flex;
+            /* width: 80%; */
+            margin: auto;
+        }
+
+        .footerColumns {
+            margin-left: 120px;
+        }
+
+        #socialIconsContainer {
+            display: flex;
+        }
+        .socialIcons {
+            width: 30px;
+            height: 30px;
+            margin-left: 20px;
+        }
+
+        /*------------------------ Footer: Payment Partners Section --------------------*/
+
+        #paymentPartnerSection {
+            background-color: rgb(243, 255, 255);
+            height: 150px;
+        }
+
+        #paymentPartners {
+            display: flex;
+            margin-left: 80px;
+        }
+
+        #paymentPartnersHeader {
+            margin-left: 100px;
+            font-family: sans-serif;
+            font-weight: 400;
+            margin-top: 0;
+            color: #4a4a4a;
+            font-weight: 600;
+        }
+
+        .paymentPartnerLogo {
+            height: 48px;
+            width: 48px;
+            padding-left: 20px;
+            margin-top: 15px;
+        }
+
+        #paymentPartners h3 {
+            margin-left: 50px;
+            font-family: sans-serif;
+            font-weight: 400;
+            color: #4a4a4a;
+
+        }
+        a{
+            text-decoration: none;
+            color: #4a4a4a;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <!--------------------------------------HTML NAVBAR HTML CODE START---------------------------------------->
+
+    <body>
+        <div id="navbar">
+
+        </div>
+        <!--------------------------------------HTML NAVBAR HTML CODE ENDS---------------------------------------->
+
+        <!-- mid-section starts-->
+        <div id="mid-section">
+            
+            <!-------------------------- SLIDESHOW CAROUSEL ------------------------------>
+            <div class="slideshow-container">
+                <div class="slideshow-inner">
+                  <div class="mySlides fade">
+                
+                    <img  src='https://consumer-app-images.pharmeasy.in/marketing/comp_50lac.jpg' style='width: 60%;margin-left: 20%;' alt="sally lightfoot crab"/>
+                    <!-- <div class="text">Sally Lightfoot Crab</div> -->
+                  </div>
+                
+                  <div class="mySlides fade">
+                
+                    <img  src='https://consumer-app-images.pharmeasy.in/marketing/comp_cod.jpg' style='width: 60%;margin-left: 20%;' alt="fighting nazca boobies"/>
+                    <!-- <div class="text">A scuffle between two Nazca Boobies</div> -->
+                  </div>
+                
+                  <div class="mySlides fade">
+                
+                    <img  src='https://consumer-app-images.pharmeasy.in/marketing/comp_3step.jpg' style='width: 60%;margin-left: 20%;' alt="otovalo waterfall"/>
+                    <!-- <div class="text">A waterfall discovered on a hike in Otovalo</div> -->
+                  </div>
+                
+                  <div class="mySlides fade">
+                
+                    <img  src='https://consumer-app-images.pharmeasy.in/marketing/comp_india_covered.jpg' style='width: 60%;margin-left: 20%;' alt="pelican"/>
+                    <!-- <div class="text">Pelican</div> -->
+                  </div>
+                  
+                  </div>
+                
+                
+                  <a class="prev" onclick='plusSlides(-1)'>&#10094;</a>
+                  <a class="next" onclick='plusSlides(1)'>&#10095;</a>
+                </div>
+                <br/>
+                
+                
+                <div style='text-align: center;'>
+                  <span class="dot" onclick='currentSlide(1)'></span>
+                  <span class="dot" onclick='currentSlide(2)'></span>
+                  <span class="dot" onclick='currentSlide(3)'></span>
+                  <span class="dot" onclick='currentSlide(4)'></span>
+                </div>
+
+            <div id="products-grid">
+                <!-- INDIVIDUAL HEALTHCARE PRODUCT CARDS -->
+                
+                <!-- CARD 1 -->
+                <div class="healthcare-product-card">
+                    <img class="healthcare-product-img"
+                        src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/50044c74b6c33b4baca34b57cc69af3e.png">
+                    <h3>
+                        <a href="./addToCart/home.html">
+                            Covid Essentials
+                        </a>
+                    </h3>
+                    <p class="healthcare-product-discount-rate">
+                        Upto 80% Off
+                    </p>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="healthcare-product-card">
+                    <img class="healthcare-product-img"
+                        src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/6256cbe92e3d386bb0293463b5928a2f.png">
+                    <h3>
+                        <a href="https://pharmeasy.in/health-care/personal-care-877">
+                            Personal Care
+                        </a>
+                    </h3>
+                    <p class="healthcare-product-discount-rate">
+                        Upto 80% Off
+                    </p>
+                </div>
+
+                 <!-- CARD 3 -->
+                 <div class="healthcare-product-card">
+                    <img class="healthcare-product-img"
+                        src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/8106fc397f383ea08c774b4b44861a3f.png">
+                    <h3>
+                        Health Food and Drinks
+                    </h3>
+                    <p class="healthcare-product-discount-rate">
+                        Upto 57% Off
+                    </p>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="healthcare-product-card">
+                    <img class="healthcare-product-img"
+                        src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/16f3bef17dc730f89f381ed41ecb8000.png">
+                    <h3>
+                        Skin Care
+                    </h3>
+                    <p class="healthcare-product-discount-rate">
+                        Upto 50% Off
+                    </p>
+                </div>
+
+                <!-- CARD 5 -->
+                <div class="healthcare-product-card">
+                    <img class="healthcare-product-img"
+                        src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/90931d91f15d326a9e439479d683e308.png">
+                    <h3>
+                        Home Care
+                    </h3>
+                    <p class="healthcare-product-discount-rate">
+                        Upto 35% Off
+                    </p>
+                </div>
+
+                <!-- CARD 6 -->
+                <div class="healthcare-product-card">
+                    <img class="healthcare-product-img"
+                        src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/38b06b7e36883b49814d93076c5bf982.png">
+                    <h3>
+                        Ayurvedic Care
+                    </h3>
+                    <p class="healthcare-product-discount-rate">
+                        Upto 70% Off
+                    </p>
+                </div>
+
+                <!-- CARD 7 -->
+                <div class="healthcare-product-card">
+                    <img class="healthcare-product-img"
+                        src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/271af64b5f373b17a68d7c061ddd337a.png">
+                    <h3>
+                        Sexual Wellness
+                    </h3>
+                    <p class="healthcare-product-discount-rate">
+                        Upto 53% Off
+                    </p>
+                </div>
+
+                <!-- CARD 8 -->
+                <div class="healthcare-product-card">
+                    <img class="healthcare-product-img"
+                        src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/5f1f108206f43522b37c2e69070f8295.png">
+                    <h3>
+                        Fitness & Supplements
+                    </h3>
+                    <p class="healthcare-product-discount-rate">
+                        Upto 80% Off
+                    </p>
+                </div>
+        
+                <!-- CARD 9 -->
+                <div class="healthcare-product-card">
+                    <img class="healthcare-product-img"
+                        src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/8a416183822c33b392b5b4bfdac1a114.png">
+                    <h3>
+                        Mother & Baby Care
+                    </h3>
+                    <p class="healthcare-product-discount-rate">
+                        Upto 50% Off
+                    </p>
+                </div>
+                
+                <!-- CARD 10 -->
+                <div class="healthcare-product-card">
+                    <img class="healthcare-product-img"
+                        src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/b276b1a47a1538bf85cac04573dae05a.png">
+                    <h3>
+                        Healthcare Devices
+                    </h3>
+                    <p class="healthcare-product-discount-rate">
+                        Upto 65% Off
+                    </p>
+                </div>
+                
+                <!-- CARD 11 -->
+                <div class="healthcare-product-card">
+                    <img class="healthcare-product-img"
+                        src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/0afc410f50543e4785ec9af3f2a42fda.png">
+                    <h3>
+                        Surgicals & Dressings
+                    </h3>
+                    <p class="healthcare-product-discount-rate">
+                        Upto 55% Off
+                    </p>
+                </div>
+                
+                <!-- CARD 12 -->
+                <div class="healthcare-product-card">
+                    <img class="healthcare-product-img"
+                        src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/8c202391ef21315ab4b5083250d358b2.png">
+                    <h3>
+                        Health Condition
+                    </h3>
+                    <p class="healthcare-product-discount-rate">
+                        Upto 65% Off
+                    </p>
+                </div>
+                
+                <!-- CARD 13 -->
+                <div class="healthcare-product-card">
+                    <img class="healthcare-product-img"
+                        src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/cf2abb21564d3038bdf9fd5b710ea321.png">
+                    <h3>
+                        Diabetic Care
+                    </h3>
+                    <p class="healthcare-product-discount-rate">
+                        Upto 65% Off
+                    </p>
+                </div>
+                
+                
+                <!-- CARD 14 -->
+                <div class="healthcare-product-card">
+                    <img class="healthcare-product-img"
+                        src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/d97ea33273a530a493b73c61d28a609b.png">
+                    <h3>
+                        Elderly Care
+                    </h3>
+                    <p class="healthcare-product-discount-rate">
+                        Upto 45% Off
+                    </p>
+                </div>
+
+                <!-- CARD 15 -->
+                <div class="healthcare-product-card">
+                    <img class="healthcare-product-img"
+                        src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/f0c48bce571139dab2349cdf45b84b29.png">
+                    <h3>
+                        Accessories & Wearables
+                    </h3>
+                    <p class="healthcare-product-discount-rate">
+                        Upto 35% Off
+                    </p>
+                </div>
+                
+                <!-- CARD 16 -->
+                <div class="healthcare-product-card">
+                    <img class="healthcare-product-img"
+                        src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/64e2a560805f3c0c91bb63a7f64f71df.jpg">
+                    <h3>
+                        Beauty
+                    </h3>
+                    <p class="healthcare-product-discount-rate">
+                        Upto 15% Off
+                    </p>
+                </div>
+                
+
+            </div>
+        </div>
+
+        <!----------------------------------------HEALTHCARE PRODUCTS TEXT SECTION-------------------------------------->
+        <div id="healthcare-bottom-text-section">
+            <h2>
+                Shop Safely And Worry-Free On PharmEasy
+            </h2>
+            <p>
+                PharmEasy is a renowned name in the online shopping of Over The Counter or healthcare products and other daily essentials. Ordering online on PharmEasy is convenient, fast and hassle-free; you can avoid the annoyance of queuing up at your local pharmacy and also avail of huge discounts of up to 80% OFF. Purchasing the healthcare requirements such as medical devices and nutritional supplements that you need will no longer burn a hole in your pocket. At PharmEasy, you are sure to find everything that you need because we have products across all healthcare categories.
+            </p>
+            <h3>
+                Why choose PharmEasy?
+            </h3>
+            <ul>
+                <li>
+                    8400+ Brands
+                </li>
+                <li>
+                    35K products in our stock
+                </li>
+                <li>
+                    Delivery to 22000+ pin codes
+                </li>
+                <li>
+                    Delivery to 22000+ pin codes
+                </li>
+                <li>
+                    8400+ Brands
+                </li>
+                <li>
+                    Over 2M customers served
+                </li>
+            </ul>
+
+            <h3>
+                Our most popular categories:
+            </h3>
+            <p>
+                We have a range of categories and products, some which are:
+            </p>
+            <h3>
+                Devices:
+            </h3>
+            <p>
+                With the pandemic upending our lives, we have all realized that there are some medical devices that we need to keep in our homes such as Oximeter, Thermometer, Inhaler, Blood pressure monitor, Glucometer.
+            </p>
+            <h3>
+                Personal care
+            </h3>
+            <p>
+                Personal care products can include a wide range of products such as Bath products, , Skincare essentials, Razor blades, Toothpaste and toothbrush, Wet wipes, Lip balm, Face masks, Hand sanitizer, etc.
+            </p>
+
+            <h3>
+                Nutrition and fitness supplements
+            </h3>
+            <p>
+                To give your health a helping hand, you can order a wide variety of health supplements including Health drinks, Nutritional powder, Nutrition tablets/capsules.
+            </p>
+
+            <h3>
+                Ayurvedic care
+            </h3>
+            <p>
+                Place your trust in the goodness of natural and organic ayurvedic products for an all-around healthy mind and body. There’s plenty to choose from such as Aloe vera juice, Moringa capsules, Garlic capsules.
+            </p>
+
+            <h3>
+                Home care
+            </h3>
+            <p>
+                Home care products are things you need every day such as disinfectant spray, phenyl, dishwashing liquid, etc. Get them all at spectacular discounts on PharmEasy.
+            </p>
+
+            <h3>
+                Baby and mom care
+            </h3>
+            <p>
+                PharmEasy also has an impressive range of baby and mom care products including Diapers, Baby bath products, Infant formula food, Mother’s health drinks, Diaper rash creams, Baby wipes.
+            </p>
+
+            <h3>
+                Our top brands:
+            </h3>
+            <p>
+                Get products from the most famous and trusted brands including Accu-chek, Dettol, Horlicks, Baidyanath, Sebamed.
+            </p>
+
+            <h3>
+                You are safe with PharmEasy:
+            </h3>
+            <p>
+                Given the times, we are taking all precautions to ensure that we keep everyone safe - our customers and the people we work with.
+            </p>
+            <h3>
+                We ensure
+            </h3>
+            <ul>
+                <li>
+                    Regular sanitization of our premises and warehouses
+                </li>
+                <li>
+                    Temperature checks of our employees and delivery partners
+                </li>
+                <li>
+                    No-contact door-step delivery
+                </li>
+                <li>
+                    Sanitized packaging
+                </li>
+            </ul>
+            <h3>
+                Youe safety is our priority
+            </h3>
+            <li>
+                Stay safe at home and shop at your convenience from PharmEasy. All you have to do is place your order and we will try to deliver it at the earliest.
+            </li>
+        </div>
+        <hr>
+        
+         <!----------------------------------------APP BENEFITS-------------------------------------->
+        <div id="appBenefits">
+            <div class="appBenefitsCard">
+                <img src="https://pharmeasy.in/_next/image?url=%2Ficons%2FgenuineMedicine.svg&w=64&q=75">
+                <h4>
+                    1 Lakh+ Products
+                </h4>
+                <p>
+                    We maintain strict quality controls on all our partner retailers, so that you always get standard quality products.
+                </p>
+            </div>
+            <div class="appBenefitsCard">
+                <img src="https://pharmeasy.in/_next/image?url=%2Ficons%2FsecurePayment.svg&w=64&q=75">
+                <h4>
+                    Secure Payment
+                </h4>
+                <p>
+                    100% secure and trusted payment protection
+                </p>
+            </div>
+            <div class="appBenefitsCard">
+                <img src="https://pharmeasy.in/_next/image?url=%2Ficons%2FeasyReturn.svg&w=64&q=75">
+                <h4>
+                    Easy Return
+                </h4>
+                <p>
+                    We have a new and dynamic return window policy for medicines and healthcare items. Refer FAQs section for more details.
+
+                </p>
+            </div>
+        </div>
+        <hr>
+        <!----------------------------------------DOWNLOAD APP SECTION -------------------------------------->
+        <div id="downloadAppSection">
+            <div>
+                <img src="https://pharmeasy.in/_next/image?url=%2Ficons%2FfooterMobile.jpg&w=256&q=75">
+            </div>
+            <div id="appLinks">
+                <h2>
+                    Download the App for Free
+                </h2>
+                <div id="app-store-container">
+                    <div class="AppStoreDiv">
+                        <img class="appStoreImg" src="https://pharmeasy.in/_next/image?url=%2Ficons%2FplayStore.png&w=32&q=75">
+                        <p>
+                            Google Play
+                        </p>
+                    </div>
+                    <div class="AppStoreDiv">
+                        <img class="appStoreImg" src="https://pharmeasy.in/_next/image?url=%2Ficons%2FappStore.png&w=32&q=75">
+                        <p>
+                            App Store
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <!----------------------------FOOTER SECTION START ------------------------------>
+        <div id="healthcare-footer">
+            <!-- COLUMN 1 -->
+            <div class="footerColumns">
+                <h4>
+                    Our Company
+                </h4>
+                <p>
+                    About Us
+                </p>
+                <p>
+                    Careers
+                </p>
+                <p>
+                    Blog
+                </p>
+                <p>
+                    Partner with PharmEasy
+                </p>
+                <h4>
+                    Our Services
+                </h4>
+                <p>
+                    Order Medicine
+                </p>
+                <p>
+                    Healthcare Products
+                </p>
+                <p>
+                    Lab Tests
+                </p>
+            </div>
+            <!-- COLUMN 2 -->
+            <div class="footerColumns" >
+                <h4>
+                    Featured Categories
+                </h4>
+                <p>
+                    Covid Essentials
+                </p>
+                <p>
+                    Personal Care
+                </p>
+                <p>
+                    Health Food and Drinks
+                </p>
+                <p>
+                    Skin Care
+                </p>
+                <p>
+                    Home Care
+                </p>
+                <p>
+                    Ayurvedic Care
+                </p>
+                <p>
+                    Sexual Wellness
+                </p>
+                <p>
+                    Fitness & Supplements
+                </p>
+                <p>
+                    Mother & Baby Care
+                </p>
+                <p>
+                    Healthcare Devices
+                </p>
+                <p>
+                    Surgicals & Dressings
+                </p>
+                <p>
+                    Diabetic Care
+                </p>
+                <p>
+                    Elderly Care
+                </p>
+                <p>
+                    Accessories & Wearables
+                </p>
+                <p>
+                    Beauty
+                </p>
+            </div>
+            <!-- COLUMN 3 -->
+            <div class="footerColumns">
+                <h4>
+                    Need Help
+                </h4>
+                <p>
+                    Browse All Medicines
+                </p>
+                <p>
+                    Browse All Molecules
+                </p>
+                <p>
+                    Browse All Cities & Areas
+                </p>
+                <p>
+                    FAQs
+                </p>
+                <h4>
+                    Policy Info
+                </h4>
+                <p>
+                    Editorial Policy
+                </p>
+                <p>
+                    Privacy Policy
+                </p>
+                <p>
+                    Vulnerability Disclosure Policy
+                </p>
+                <p>
+                    Terms and condition
+                </p>
+                <p>
+                    Customer Support Policy
+                </p>
+                <p>
+                    Return Policy
+                </p>
+            </div>
+            <!-- COLUMN 4 -->
+            <div class="footerColumns">
+                <h4>
+                    FOLLOW US
+                </h4>
+                <div id="socialIconsContainer">
+                    <img class="socialIcons" src="https://img.icons8.com/ios/344/instagram-new--v1.png">
+                    <img class="socialIcons" src="https://img.icons8.com/ios/344/facebook-new.png">
+                    <img class="socialIcons" src="https://img.icons8.com/ios/344/youtube-play--v1.png">
+                    <img class="socialIcons" src="https://img.icons8.com/ios/344/twitter--v1.png">
+                </div>
+            </div>
+        </div>
+        <!------------------------ FOOTER: PAYMENT PARTNERS SECTION ---------------------->
+        <div id="paymentPartnerSection">
+            <div>
+                <h3 id="paymentPartnersHeader">
+                    Our Payment Partners
+                </h3>
+                <div id="paymentPartners">
+                    <img class="paymentPartnerLogo" src="https://assets.pharmeasy.in/web-assets/dist/af0c6812.svg">
+                    <img class="paymentPartnerLogo" src="https://assets.pharmeasy.in/web-assets/dist/0e010044.svg">
+                    <img class="paymentPartnerLogo" src="https://assets.pharmeasy.in/web-assets/dist/1066bb1f.svg">
+                    <img class="paymentPartnerLogo" src="https://assets.pharmeasy.in/web-assets/dist/3a1a533d.svg">
+                    <img class="paymentPartnerLogo" src="https://assets.pharmeasy.in/web-assets/dist/fbea1701.svg">
+                    <img class="paymentPartnerLogo" src="https://assets.pharmeasy.in/web-assets/dist/4733a49d.svg">
+                    <img class="paymentPartnerLogo" src="https://assets.pharmeasy.in/web-assets/dist/b278e536.svg">
+                    <img class="paymentPartnerLogo" src="https://assets.pharmeasy.in/web-assets/dist/0aca2077.svg">
+                    <img class="paymentPartnerLogo" src="https://assets.pharmeasy.in/web-assets/dist/44a51ca5.svg">
+                    <img class="paymentPartnerLogo" src="https://assets.pharmeasy.in/web-assets/dist/d058b00d.svg">
+                    <img class="paymentPartnerLogo" src="https://assets.pharmeasy.in/web-assets/dist/e9445364.svg">
+                    <h3>© 2022 PharmEasy. All Rights Reserved</h3>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!----------------------------FOOTER SECTION ENDS ------------------------------>
+
+
+
+    </body>
+
+</html>
+<script type="module" src="./healthProducts.js"></script>

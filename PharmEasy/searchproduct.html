@@ -1,0 +1,190 @@
+<html>
+    <head>
+        <title>Search Product List</title>
+        <style>
+            #showresulttitle{
+                margin-left: 130px;
+            }
+            #containerall{
+           
+                display:flex;
+                width:80%;
+                margin:auto;
+            }
+            #leftcont{
+              
+                width:50%;
+                
+            }
+            #rightcont{
+              
+                width:350px;
+                margin-left: 100px;
+            }
+            .viewcart{
+                width:100%;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                margin-top: 20px;
+                background-color: grey;
+                border:none;
+                color:white;
+                font-weight: bold;
+                border-radius: 5px;
+            }
+            #pres{
+                border:1px solid gray;
+                margin-top: 15px;
+                border-radius: 5px;
+                padding-left:20px;
+            }
+           #hrline{
+            width:90%;
+           }
+           #comb{
+            display:flex;
+            column-gap: 30px;
+            margin-top: 20px;
+           }
+        </style>
+    </head>
+    <body>
+        <h3 id="showresulttitle"></h3>
+        <div id="containerall">
+            <div id="leftcont">
+                <div id="showlist"></div>
+            </div>
+            <div id="rightcont">
+                <div><b>Please add item(s) to proceed </b></div>
+                <div id="viewcart"><button class="viewcart">View Cart ></button></div>
+                <div id="pres">
+                    <p>What is Valid prescription</p>
+                    <hr id="hrline">
+                    <div id="prescontains">A valid prescription contains</div>
+                    <div id="comb">
+                        <div id="carton"><img src="https://assets.pharmeasy.in/web-assets/dist/bb422239.svg" alt="" class="carton"></div>
+                        <div id="cartondet">Doctor Details</div>
+                    </div>
+                    <div id="comb">
+                        <div id="carton"><img src="https://assets.pharmeasy.in/web-assets/dist/2a2b3a73.svg" alt="" class="carton"></div>
+                        <div id="cartondet">Date of Prescription</div>
+                    </div>
+                    <div id="comb">
+                        <div id="carton"><img src="https://assets.pharmeasy.in/web-assets/dist/03a8fd62.svg" alt="" class="carton"></div>
+                        <div id="cartondet">Patient Details</div>
+                    </div>
+                    <div id="comb">
+                        <div id="carton"><img src="https://assets.pharmeasy.in/web-assets/dist/598e39e8.svg" alt="" class="carton"></div>
+                        <div id="cartondet">Dosasge Details</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
+<script src="./cbscripts/searchproduct.js"></script>
+<script type="module">
+    import {getData} from "./cbscripts/index.js";
+
+    let x=await getData();
+  
+    console.log("x=",x);
+    
+    appendSearch(x);
+    
+ function appendSearch(data)
+ {
+   // document.querySelector("#showlist").innerHTML=null;
+    
+   let query = JSON.parse(localStorage.getItem("search"));
+   
+   if(query)
+   {
+    document.querySelector("#showresulttitle").innerText="Showing all results for"+" "+query;
+   }
+   else{
+    document.querySelector("#showresulttitle").innerText="Showing all results for medicine";
+   }
+   //
+   console.log("qw=",query);
+     let count=1;
+     var productArr=[];
+     data.forEach(function(el){
+         if(el.name.toUpperCase().includes(query.toUpperCase()))
+         {
+           
+             console.log("Match");
+             let box =  document.createElement("div");
+             box.className="medicinebox";
+             box.style.border="1px solid gray";
+             box.style.borderRadius="5px";
+             box.style.display="flex";
+             box.style.marginBottom="20px";
+
+             let photo = document.createElement("div");
+             photo.style.width="150px";
+
+             let theory = document.createElement("div");
+             theory.style.width="250px";
+
+             let cart = document.createElement("div");
+             cart.style.width="150px";
+ 
+             let image = document.createElement("img");
+             image.src = el.image2;
+             image.style.width="70px";
+             image.style.marginTop="30px";
+
+              let image1 = document.createElement("img");
+              image1.src = el.image1;
+              image1.style.width="70px";
+              image1.style.marginTop="30px";
+
+              photo.append(image1,image);
+
+             let name = document.createElement("h2");
+             name.innerText=el.name;
+             let price = document.createElement("h3");
+             price.innerText = "Rs"+" "+el.price;
+             price.style.color="red";
+ 
+            theory.append(name,price);
+
+            let cartbutton = document.createElement("button");
+            cartbutton.innerText="Add To Cart";
+            cartbutton.style.padding="10px";
+            cartbutton.style.paddingRight="20px";
+            cartbutton.style.paddingLeft="20px";
+            cartbutton.style.backgroundColor="teal";
+            cartbutton.style.color="white";
+            cartbutton.style.fontWeight="bold";
+            cartbutton.style.borderRadius="5px";
+            cartbutton.style.marginTop="50%";
+            cartbutton.style.border="none";
+            cartbutton.addEventListener("click",function(){
+                productArr.push(el);
+                localStorage.setItem("cartProduct",JSON.stringify(productArr));
+            });
+
+
+            cart.append(cartbutton);
+
+             box.append(photo,theory,cart);
+            console.log("box",box);
+            document.querySelector("#showlist").append(box);
+        
+            
+         }
+         else{
+             count++;
+             if(count==data.length)
+             {
+                 console.log("No match");
+             }
+           
+         }
+     });
+ }
+ 
+</script>
